@@ -1,0 +1,97 @@
+<!-- CTRL + } -->
+<!-- Doctype me permite indicar la versión de HTML que estoy utilizando - V5-->
+<!DOCTYPE html>
+<html lang="es">
+  <!-- configuración e informátiva -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estructura Slack</title>
+  </head>
+  <!-- TODO lo que se ve, toda la parte visual -->
+  <body>
+    <nav id="menu">
+      <!-- span, etiqueta NO SEMÁNTICA, pero me permite envolver texto, resaltador -->
+      <span>Slack</span>
+      <!-- unordered list - lista desordenada -->
+      <ul>
+        <!-- li - elementos de una lista -->
+        <li>Funciones</li>
+        <li>Soluciones</li>
+        <li>Empresa</li>
+        <li>Recursos</li>
+        <li>Precio</li>
+      </ul>
+      <!-- div, divisor, NO ES SEMÁNTICA -->
+      <div>
+        <!-- hipervinculo, que me permite ir otro lado, link -->
+        <a href="">Iniciar Sesión</a>
+        <!-- button, es un botón para disparar alguna acción -->
+        <button>Hablar con un Asesor</button>
+        <button>Es gratis</button>
+      </div>
+    </nav>
+    <!-- horizontal rule -->
+    <hr />
+    <header>
+      <div>
+        <h1>
+          Creada para las personas Diseñada para la productividad
+        </h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+        <button>
+          Registrate con el correo electrónico
+        </button>
+        <button>Registrarse con Google</button>
+        <p>
+          Probar Slack es gratis todo el tiempo que quieras
+        </p>
+      </div>
+      <!-- imagen, siempre que vaya con alt -->
+      <img 
+        src="https://s1.elespanol.com/2023/11/28/enclave-ods/813179001_237982437_1706x960.jpg"
+        width="400"
+        alt="foto de pingüino caminando"
+      >
+    </header>
+    <hr />
+    <main>
+      <section>
+        <!-- svg, webp, jpg ... png -->
+        <!-- rutas absolutas y relativas -->
+        <!-- abs: C:\Users\User\Desktop\Frontend\Semana1\01-html ✖️ -->
+        <!-- rel: ./mapache.jpg -->
+        <img 
+          src="./mapache.jpg"
+          width="400"
+          alt="mapache codicioso"
+        >
+        <div>
+          <h2>
+            Muévete más eficientemente con todas tus herramientas en un mismo lugar
+          </h2>
+          <!-- paragraph, párrafo -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error <span>
+              expedita consequuntur ipsam?
+            </span>
+          </p>
+          <!-- ancla, anchor, hipervínculo -->
+          <a href="https://www.google.com/">
+            Ver información acerca de la plataforma de Slack
+          </a>
+          <!-- break -->
+          <br />
+          <a href="./extra.html" target="_blank">
+            Más información
+          </a>
+          <br />
+          <!-- para que esto funcione otro elemento tiene que tener como id el valor que se le ponga en el href pero sin # -->
+          <a href="#menu">Ir a menú</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
