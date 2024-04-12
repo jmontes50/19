@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form>
+      <!-- input va a depender del atributo que le demos para definir su comportamiento -->
+      <label for="input-nombre">
+        Nombre Completo:
+      </label>
+      <input 
+        type="text" 
+        id="input-nombre"
+        placeholder="Ej. Jorge Garnica"
+        pattern="^[a-zA-Z]{1,20}$"
+      />
+      <!-- ⬆️ patrón regular, regular pattern -->
+      <br />
+      <label for="input-edad">Edad: </label>
+      <input
+        type="number"
+        id="input-edad"
+        placeholder="Ej. 25"
+        min="18"
+        max="60"
+      />
+      <br/>
+      <label for="input-pass">
+        Contraseña:
+      </label>
+      <input
+        type="password"
+        id="input-pass"
+        minlength="6"
+        maxlength="12"
+      >
+      <br />
+      <h4>Género</h4>
+      <input 
+        type="radio" 
+        id="radio-masculino"
+        name="genero"
+      >
+      <label for="radio-masculino">
+        Masculino
+      </label>
+      <br />
+      <input
+        type="radio"
+        id="radio-femenino"
+        name="genero"
+      />
+      <label for="radio-femenino">
+        Femenino
+      </label>
+      <br />
+      <input
+        type="radio"
+        id="radio-divulgar"
+        name="genero"
+      />
+      <label for="radio-divulgar">
+        No Divulgar
+      </label>
+      <h4>Hobbies</h4>
+      <!-- usualmente en el código fuera del contenido a mostrar no se suele utilizar ñ ´ -->
+      <label for="musica">Escucha música</label>
+      <input type="checkbox" id="musica">
+      <br />
+      <label for="dormir">Dormir</label>
+      <input type="checkbox" id="dormir">
+      <br/>
+      <label for="youtube">Ver youtube</label>
+      <input type="checkbox" id="youtube">
+      <br/>
+      <label for="peliculas">Ver películas</label>
+      <input type="checkbox" id="peliculas">
+      <br />
+      <h4>Ubicación</h4>
+      <label for="departamento">Dónde resides?</label>
+      <select id="departamento">
+        <option selected disabled>
+          Selecciona una:
+        </option>
+        <option>Arequipa</option>
+        <option>Lima</option>
+        <option>Tacna</option>
+        <option>Trujillo</option>
+        <option>Callao</option>
+      </select>
+      <h4>País</h4>
+      <input list="pais">
+      <datalist id="pais">
+        <option>Perú</option>
+        <option>Chile</option>
+        <option>Colombia</option>
+        <option>México</option>
+        <option>Bolivia</option>
+        <option>Argentina</option>
+        <option>España</option>
+      </datalist>
+      <br/>
+      <label for="input-fecha">
+        Fecha de nacimiento:
+      </label>
+      <input type="date" id="input-fecha">
+      <label>Color:</label>
+      <input type="color">
+      <br/>
+      <input type="submit" value="Enviar">
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      
+    </form>
+  </body>
+</html>
