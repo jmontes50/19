@@ -1,0 +1,15 @@
+/* Buena práctica */
+/* * - comodín para todo */
+* {
+  box-sizing: border-box;
+}
+
+header {
+  border:2px solid blue;
+  padding:10px;
+  margin:20px;
+  /* cuando le damos un tamaño no lo hace considerando la caja con el borde, lo hace considerando el contenido */
+  width:150px;
+  height:100px;
+  /* box-sizing: border-box; */
+}
