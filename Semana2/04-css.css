@@ -65,11 +65,12 @@ tr:nth-of-type(odd) {
 }
 
 /* hover, cuando pasamos el mouse por encima */
-tr:hover {
+tbody tr:hover {
   background-color: skyblue;
   cursor: pointer;
 }
 
+/* los elementos article que sean hermanos, y va a buscar uno que coincida con ese numero*/
 article:nth-child(2) {
   background-color: chocolate;
 }
