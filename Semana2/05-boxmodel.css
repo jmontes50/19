@@ -1,7 +1,11 @@
-/* Buena práctica */
+/* Buena práctica, RESET CSS */
+/* normalize.css */
 /* * - comodín para todo */
 * {
   box-sizing: border-box;
+  /* algunos elementos traen estilos por defecto, comunmente los más molestos son el padding y el margin por defecto */
+  margin:0;
+  padding:0;
 }
 
 header {
