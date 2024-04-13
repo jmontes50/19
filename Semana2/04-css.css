@@ -41,6 +41,8 @@ ul li{
 }
 
 /* ~ , para seleccionar hermanos 🐥  */
+/*  * es un selector que afecta a todos */
 .contenido ~ div{
   border:2px solid peru;
 }
+
