@@ -46,3 +46,30 @@ ul li{
   border:2px solid peru;
 }
 
+/* , - es como un table Y td Y th */
+table, th, td{
+  border:2px solid black;
+}
+
+/* Pseudoclases */
+
+/* lo que hace el nth-of-type(even u odd) */
+tr:nth-of-type(even) {
+  /* even - par */
+  background-color: gray;
+}
+
+tr:nth-of-type(odd) {
+  /* odd - impar */
+  background-color: aquamarine;
+}
+
+/* hover, cuando pasamos el mouse por encima */
+tr:hover {
+  background-color: skyblue;
+  cursor: pointer;
+}
+
+article:nth-child(2) {
+  background-color: chocolate;
+}
