@@ -1,0 +1,15 @@
+/* sel. de etiqueta */
+h1 {
+  color:peru;
+  font-family: Arial;
+}
+
+p {
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+/* sel. de clase, muy común */
+.importante {
+  background-color: aquamarine;
+}
