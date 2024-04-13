@@ -1,0 +1,43 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  /* temporal */
+  border:1px solid red;
+}
+
+header{
+  text-align:center;
+}
+
+h1{
+  /* un ancho máximo */
+  max-width: 1024px;
+  margin:30px auto;
+}
+
+p{
+  max-width:720px;
+  margin:10px auto;
+}
+
+button{
+  margin-top:10px;
+  margin-bottom:30px;
+}
+
+small{
+  margin:40px 0 0 0;
+  display: block;
+}
+
+.contenedor {
+  max-width:1200px;
+  /* margin, padding */
+  /* cuando damos 02 valores, arriba abajo */
+  /* margin:20px 40px; */
+  /* cuando damos 04 valores, arriba, derecha, abajo, izq, ⏱️ */
+  /* margin: 10px 20px 30px 40px; */
+  margin: 0 auto;
+}
