@@ -33,6 +33,17 @@ header {
 article {
   border:2px solid red;
   padding:20px;
-  width: 600px;
+  width: 300px;
   text-align:center;
 }
+
+/* id es único */
+#noticia{
+  color: blue;
+}
+
+/* clases aplican a varios */
+.articulos {
+  color: red;
+}
+
