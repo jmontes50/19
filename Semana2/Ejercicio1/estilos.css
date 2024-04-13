@@ -20,6 +20,7 @@ h1{
 p{
   max-width:720px;
   margin:10px auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button{
@@ -30,6 +31,12 @@ button{
 small{
   margin:40px 0 0 0;
   display: block;
+  /* en caso no encuentre una fuente saltará a la siguiente */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 100%;
 }
 
 .contenedor {
