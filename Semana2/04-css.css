@@ -26,3 +26,15 @@ p {
 /* poder jugar con la estructura y unos operadores que me van a permitir jugar */
 
 /* > - hace referencia a los primeros elementos hijos */
+ul > li{
+  color:blue;
+  text-decoration: underline;
+}
+
+/* .clase > etiqueta */
+/* #id > .clase*/
+
+/* selector selectorHijo - todos los elementos hijos */
+ul li{
+  font-weight: bold;
+}
