@@ -13,3 +13,16 @@ p {
 .importante {
   background-color: aquamarine;
 }
+
+.subrayado {
+  text-decoration: underline;
+}
+
+/* sel. de id */
+#introduccion {
+  font-size: 19px;
+}
+
+/* poder jugar con la estructura y unos operadores que me van a permitir jugar */
+
+/* > - hace referencia a los primeros elementos hijos */
