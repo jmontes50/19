@@ -16,4 +16,16 @@ header {
   width:150px;
   height:100px;
   /* box-sizing: border-box; */
+  /* display: inline; */
+}
+/* la mayoria de elementos va a venir con display block, div, article, header, h1, h6, */
+
+.resaltar {
+  background-color: gold;
+  display:inline;
+  height:100px;
+  width:2000px;
+  /* algunos pocos van a venir con inline, span, button, label, input */
+  /* inline, me voy a acomodar al contenido, no puedo tener width*/
+  
 }
