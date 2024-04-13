@@ -35,6 +35,12 @@ ul > li{
 /* #id > .clase*/
 
 /* selector selectorHijo - todos los elementos hijos */
+/* todos los li que esten dentro de un ul */
 ul li{
   font-weight: bold;
+}
+
+/* ~ , para seleccionar hermanos 🐥  */
+.contenido ~ div{
+  border:2px solid peru;
 }
