@@ -37,6 +37,7 @@ article {
   text-align:center;
 }
 
+/* especificidad */
 /* id es único */
 #noticia{
   color: blue;
