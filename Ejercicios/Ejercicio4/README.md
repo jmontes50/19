@@ -13,7 +13,7 @@ El desarrollo se llevará a cabo siguiendo estos pasos:
 2. **Estilización con CSS**: Utilizar CSS para agregar colores, tipos de fuente y cambiar el tamaño de los elementos de acuerdo con el diseño de la imagen. Utiliza los assets de las imágenes proporcionadas en este repositorio para darle estilo. Utiliza Flexbox y el modelo de caja para llegar a el resultado
 
 > [!TIP]
-> Ten en cuenta las propiedades de flexbox a utilizar y recuerda que estan se aplican a un elemento padre. Considera la propiedad `flex-wrap`
+> Ten en cuenta las propiedades de flexbox a utilizar y recuerda que estan se aplican a un elemento padre. Considera la propiedad `flex-wrap` y agrega propiedades como padding del modelo de caja para llegar al resultado.
 
 ## Recursos
 - Las imagenes las encontrarás en `assets`

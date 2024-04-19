@@ -31,7 +31,9 @@ main{
 
 .caja1{
     background-color: aqua;
-    position:static;
+    position:relative;
+    /* quien tenga un mayor valor en el z-index se pondrá por encima */
+    z-index:10;
 }
 .caja2{
     /* cerezas */
@@ -39,6 +41,7 @@ main{
     position:absolute; 
     top: 20px;
     left:30px;
+    z-index:1;
 }
 .caja3{
     background-color: magenta;
