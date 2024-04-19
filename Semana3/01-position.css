@@ -1,0 +1,30 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    width:800px;
+    height: 800px;
+    border:2px solid black;
+}
+
+.caja1, .caja2, .caja3, .caja4{
+    width:150px;
+    height:150px;
+    border:2px solid red;
+}
+
+.caja1{
+    background-color: aqua;
+}
+.caja2{
+    background-color: yellow;
+}
+.caja3{
+    background-color: magenta;
+}
+.caja4{
+    background-color: orange;
+}
