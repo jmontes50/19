@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    background-color: peru;
+    border:2px solid black;
+}
+
+.link {
+    background-color: aquamarine;
+    border: 2px solid steelblue;
+}
