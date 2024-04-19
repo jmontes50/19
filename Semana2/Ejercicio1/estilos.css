@@ -101,3 +101,34 @@ img {
 section {
   padding: 60px;
 }
+
+/* nav */
+nav li{
+  text-decoration: none;
+  list-style: none;
+}
+
+nav *{
+  margin:0;
+  padding:0;
+}
+
+.menu-principal{
+  display: flex;
+  justify-content: space-between;
+  padding:30px;
+}
+
+.logo{
+  width:275px;
+  height:29px;
+}
+
+.links{
+  display: flex;
+  min-width:500px;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+
