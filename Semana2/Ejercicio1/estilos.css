@@ -68,3 +68,36 @@ img {
   /* margin: 10px 20px 30px 40px; */
   margin: 0 auto;
 }
+
+.table-info{
+  font-family: Arial, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-info td{
+  padding:20px;
+}
+/* de .table-info todos los hijos que sean tr impares y de esos tr impares todos los td que tengan un fondo amarillo */
+.table-info tr:nth-of-type(odd) td{
+  /* hexadecimales #RRGGBB 0--->F*/
+  background-color: #FED501;
+  /* rgb, 0 - 255 */
+  /* background-color: rgb(244, 208, 63); */
+  /* Hue, Saturation, Lightness */
+  /* Matiz, Saturacion, Luminosidad */
+  /* background-color: hsla(49, 100%, 59%, 1); */
+}
+/* de .table-info todos los hijos que sean tr impares y de esos tr impares todos los td que sean primeros hijos */
+/* nth-of-type(odd, even, 1, 2 ,3 ,4 ... */
+.table-info tr:nth-of-type(odd) td:nth-of-type(1){
+  border-radius:10px 0 0 10px;
+}
+/* de .table-info todos los hijos que sean tr impares y de esos tr impares todos los td que sean ultimos */
+.table-info tr:nth-of-type(odd) td:last-of-type{
+  border-radius:0 10px 10px 0;
+}
+
+section {
+  padding: 60px;
+}
