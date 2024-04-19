@@ -7,7 +7,7 @@
 .menu {
     background-color: peru;
     border:2px solid black;
-    height:600px;
+    height:400px;
     /* va a afectar SOLO a los primeros hijos */
     display: flex;
     /* flex-direction: row-reverse; */
@@ -21,8 +21,8 @@
     /* vertical */
     align-items: center;
 
-    flex-wrap:nowrap;
-    /* flex-wrap:wrap; */
+    /* flex-wrap:nowrap; */
+    flex-wrap:wrap;
 }
 
 .link {
@@ -32,7 +32,8 @@
     width:100px;
 }
 
-.link:nth-of-type(1){
+/* solo sirve si es que el contenedor es flex-wrap: nowrap */
+/* .link:nth-of-type(1){
     flex-grow: 4;
 }
 
@@ -46,4 +47,4 @@
 
 .link:nth-of-type(6){
     flex-shrink: 2;
-}
+} */
