@@ -4,10 +4,23 @@
     box-sizing: border-box;
 }
 
+main{
+    border:3px solid blue;
+    width:1000px;
+    height:1000px;
+    position: relative;
+    /* top:200px;
+    left:200px; */
+}
+
 .contenedor{
     width:800px;
     height: 800px;
     border:2px solid black;
+    /* vaso, copa */
+    position: absolute;
+    top:100px;
+    left:100px;
 }
 
 .caja1, .caja2, .caja3, .caja4{
@@ -18,13 +31,24 @@
 
 .caja1{
     background-color: aqua;
+    position:static;
 }
 .caja2{
+    /* cerezas */
     background-color: yellow;
+    position:absolute; 
+    top: 20px;
+    left:30px;
 }
 .caja3{
     background-color: magenta;
+    /* position:relative;
+    top:30px;
+    left:50px; */
 }
 .caja4{
     background-color: orange;
+    position:fixed;
+    bottom: 100px;
+    right: 50px;
 }
