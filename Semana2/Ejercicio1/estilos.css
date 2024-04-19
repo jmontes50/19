@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   /* temporal */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 header {
@@ -15,6 +15,9 @@ h1 {
   /* un ancho máximo */
   max-width: 1024px;
   margin: 30px auto;
+  font-family: "Fraunces", serif;
+  font-weight: 300;
+  font-size:72px;
 }
 
 p {
