@@ -77,3 +77,13 @@ header h1, header p{
   margin-bottom:40px;
   max-width: 55%;
 }
+
+/* absolute header */
+.absolute {
+  position:absolute;
+}
+
+/* del nav y del header todos los elementos (*) */
+nav *, header *{
+  position: relative;
+}
