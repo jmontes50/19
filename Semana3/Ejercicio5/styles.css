@@ -112,3 +112,39 @@ nav *, header *{
   top: 550px;
   right:0;
 }
+
+@media screen and (width < 992px) {
+  header{
+    text-align: center;
+    margin-bottom: 300px;
+  }
+
+  header h1, header p{
+    max-width: 100%;
+  }
+
+  .espiral {
+    top: 500px;
+    left: -20px;
+  }
+  
+  .imagen1 {
+    top: 600px;
+    left: calc(50% - 150px);
+  }
+  
+  .imagen2 {
+    top: 750px;
+    left:calc(50% - 250px);
+  }
+  
+  .imagen3 {
+    top: 640px;
+    left:-100px;
+  }
+  
+  .imagen4 {
+    top: 640px;
+    right:0;
+  }
+}
