@@ -1,12 +1,25 @@
+html{
+  /* html valor predeterminado del tamaño de fuente es 16px */
+  font-size: 16px;
+}
+
 header{
   text-align:center;
+  font-size:60px;
 }
 
 h1{
   /* font-size: 96px; */
-  font-size: calc(24px + 4.5vw);
+  /* font-size: calc(24px + 4.5vw); */
+  /* em va a tomar el valor más cercano */
+  font-size:1em;
+  /* rem toma de valor al elemento más lejano */
   color: peru;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+  font-size:2rem;
 }
 
 img {
@@ -22,12 +35,18 @@ img {
     /* font-size: 72px; */
     color: blueviolet;
   }
+  header{
+    font-size:40px;
+  }
 }
 
 @media screen and (width < 480px) {
   h1{
     /* font-size: 48px; */
     color:rebeccapurple;
+  }
+  header{
+    font-size:30px;
   }
 
   /* img{
