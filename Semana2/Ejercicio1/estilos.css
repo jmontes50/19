@@ -161,3 +161,40 @@ nav *{
   display: flex;
   align-items: center;
 }
+
+.card-img img{
+  height: 100%;
+}
+/* mediaqueries */
+
+@media screen and (width < 576px){
+  h1 {
+    font-size:36px;
+  }
+
+  h2 {
+    font-size:28px;
+  }
+
+  h3 {
+    font-size:24px;
+  }
+
+  section {
+    padding:30px;
+  }
+
+  .titulo-recursos{
+    margin:16px;
+  }
+
+  .cards-recursos{
+    flex-direction: column;
+  }
+
+  .card-img{
+    max-width:100%;
+    justify-content: center;
+    height: 300px;
+  }
+}
