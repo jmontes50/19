@@ -155,6 +155,10 @@ nav *{
   text-align: center;
 }
 
+.cards-recursos h3 {
+  margin:20px;
+}
+
 .card-img {
   height: 225px;
   max-width: 330px;
