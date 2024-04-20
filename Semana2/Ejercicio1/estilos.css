@@ -152,4 +152,12 @@ nav *{
 
 .cards-recursos {
   display:flex;
+  text-align: center;
+}
+
+.card-img {
+  height: 225px;
+  max-width: 330px;
+  display: flex;
+  align-items: center;
 }
