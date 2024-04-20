@@ -5,7 +5,7 @@
     padding:0;
     box-sizing: border-box;
     /* temporal */
-    border:1px solid red;
+    /* border:1px solid red; */
 }
 
 body{
@@ -78,12 +78,37 @@ header h1, header p{
   max-width: 55%;
 }
 
+/* del nav y del header todos los elementos (*) */
+nav *, header *{
+  position: relative;
+}
+
 /* absolute header */
 .absolute {
   position:absolute;
 }
 
-/* del nav y del header todos los elementos (*) */
-nav *, header *{
-  position: relative;
+.espiral {
+  top: -50px;
+  left: 800px;
+}
+
+.imagen1 {
+  top: 200px;
+  right: 350px;
+}
+
+.imagen2 {
+  top: 300px;
+  right:120px;
+}
+
+.imagen3 {
+  top: 450px;
+  right:450px;
+}
+
+.imagen4 {
+  top: 550px;
+  right:0;
 }
