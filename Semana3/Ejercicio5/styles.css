@@ -18,6 +18,21 @@ nav li{
   list-style: none;
 }
 
+button{
+  /* geometría del botón */
+  padding:16px;
+  color:white;
+  border:1px solid gray;
+}
+
+.btn-primario {
+  background-color: #205BF1;
+}
+
+.btn-secundario {
+  background-color: #34353A;
+}
+
 .main-menu {
   display:flex;
   gap:40px;
