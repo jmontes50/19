@@ -1,7 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     margin:0;
     padding:0;
     box-sizing: border-box;
     /* temporal */
     border:1px solid red;
+}
+
+body{
+  background-color: #1E1F24;
+  color:white;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav li{
+  list-style: none;
+}
+
+.main-menu {
+  display:flex;
+  gap:40px;
+  font-size:14px;
+  padding:20px 0;
+}
+
+.links {
+  display:flex;
+  flex-grow: 5;
+  /* gap - brecha, nos sirve para espaciar elementos dentro de flex */
+  gap:20px;
+  align-items: center;
+}
+
+.access {
+  display: flex;
+  gap:20px;
+  align-items: center;
 }
