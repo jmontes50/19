@@ -150,7 +150,9 @@ nav *, header *{
 
   .espiral {
     top: 500px;
-    left: -20px;
+    left: -100px;
+    /* piensen en porcentaje 0 y 1 es 100% */
+    transform:scale(0.75);
   }
   
   .imagen1 {
@@ -171,5 +173,10 @@ nav *, header *{
   .imagen4 {
     top: 640px;
     right:0;
+  }
+
+  .brands{
+    position: relative;
+    top:350px;
   }
 }
