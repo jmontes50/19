@@ -113,6 +113,29 @@ nav *, header *{
   right:0;
 }
 
+.brands {
+  padding: 60px;
+}
+
+.companies {
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+.company{
+  min-width:210px;
+  max-width:600px;
+  height: 102px;
+  /* alpha, transparencia, 0 a 1*/
+  background-color: rgba(255, 255, 255, 0.05);
+  /* flex */
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+
 @media screen and (width < 992px) {
   header{
     text-align: center;
