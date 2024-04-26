@@ -205,5 +205,20 @@ nav *, header *{
     width: 100vw;
     height: 100vh;
     background-color: #1E1F24;
+    /* jugar a que el menú se muestre por encima de todo */
+    z-index:100;
+    padding: 70px 0;
+    font-size:24px;
+    gap:50px;
+    top:0;
+    right:0vw;
+  }
+
+  .cerrar-menu{
+    position:absolute;
+    display:block;
+    top:50px;
+    right: 50px;
+    cursor: pointer;
   }
 }
