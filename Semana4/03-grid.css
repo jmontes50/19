@@ -1,0 +1,18 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  /* temporal */
+  border: 1px solid red;
+}
+
+.padre {
+  min-height: 100vh;
+  display: grid;
+  /* grid-template-columns: 250px 250px 250px; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* repeat(cantidad, unidadDeMedida */
+  /* grid-template-columns: repeat(3, 250px); */
+  /* minmax(valormínimo y un valor máximo */
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
