@@ -138,6 +138,22 @@ nav *, header *{
   gap:10px;
 }
 
+/* menú desplegable */
+#checkmenu {
+  /* visibility, escondete, pero quedate ahí */
+  /* esta dentro de la estructura, pero esta escondido */
+  visibility: hidden;
+}
+
+.cerrar-menu {
+  /* no estes presente, esta el codigo pero esta ignorado, no ha sido renderizado*/
+  display: none;
+}
+
+.abrir-menu {
+  display: none;
+}
+
 @media screen and (width < 992px) {
   header{
     text-align: center;
