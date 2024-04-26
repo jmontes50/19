@@ -199,7 +199,7 @@ nav *, header *{
 
 @media screen and (width < 570px){
   .links {
-    border:1px solid red;
+    /* border:1px solid red; */
     position: fixed;
     flex-direction: column;
     width: 100vw;
@@ -228,5 +228,12 @@ nav *, header *{
     top: 30px;
     right: 30px;
     cursor: pointer;
+  }
+
+  /* checked hace referencia cuando el input check esta marcado  */
+  #checkmenu:checked ~ .links {
+    right:0;
+    transition-property: all;
+    transition-duration: 0.5s;
   }
 }
