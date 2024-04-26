@@ -121,11 +121,13 @@ nav *, header *{
   display: flex;
   flex-wrap: wrap;
   gap:20px;
+  padding:30px 0;
 }
 
 .company{
-  min-width:210px;
+  min-width:320px;
   max-width:600px;
+  /* width:28%; */
   height: 102px;
   /* alpha, transparencia, 0 a 1*/
   background-color: rgba(255, 255, 255, 0.05);
