@@ -1,0 +1,30 @@
+img{
+    width:150px;
+    animation-name: vuelo;
+    animation-duration: 5s;
+}
+/* @keyframes nombreanimacion  */
+@keyframes vuelo {
+    /* vamos a definir fotogramas con css, similar a los media queries */
+    /* con porcentaje de 0% a 100% */
+    
+    0% {
+        transform: translate(0, 0) rotate(90deg);
+    }
+
+    25% {
+        transform: translate(500px, 0) rotate(90deg);
+    }
+
+    30% {
+        transform: translate(500px, 0) rotate(180deg);
+    }
+
+    50% {
+        transform: translate(500px, 500px) rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(270deg);
+    }
+}
