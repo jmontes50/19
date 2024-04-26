@@ -211,14 +211,22 @@ nav *, header *{
     font-size:24px;
     gap:50px;
     top:0;
-    right:0vw;
+    right:100vw;
   }
 
-  .cerrar-menu{
+  .cerrar-menu {
     position:absolute;
     display:block;
     top:50px;
     right: 50px;
+    cursor: pointer;
+  }
+
+  .abrir-menu {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
     cursor: pointer;
   }
 }
