@@ -196,3 +196,14 @@ nav *, header *{
     top:350px;
   }
 }
+
+@media screen and (width < 570px){
+  .links {
+    border:1px solid red;
+    position: fixed;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1E1F24;
+  }
+}
