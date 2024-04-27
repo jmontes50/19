@@ -21,3 +21,51 @@
   --genre-color12: #e13300;
   --genre-color013: #ba5d07;
 }
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* temporal */
+  border:1px solid red;
+}
+
+/* estilos generales */
+body{
+  background-color: var(--secondary-color-01);
+  color: var(--secondary-color-04);
+  font-family: "Montserrat", sans-serif;
+}
+
+h5{
+  color: gray;
+}
+
+section{
+  padding:40px;
+}
+
+.tarjetas-busqueda{
+  margin:20px 0;
+  display: flex;
+  gap:20px;
+}
+
+.tarjeta{
+  background-color: var(--secondary-color-02);
+  min-width:250px;
+  max-width: 200px;
+  height: 350px;
+  padding:15px;
+  border-radius: 10px;
+}
+
+.tarjeta h4, .tarjeta h5{
+  margin-bottom:10px;
+}
+
+.ellipse-tarjeta{
+  width:100%;
+  margin-bottom: 20px;
+}
+
