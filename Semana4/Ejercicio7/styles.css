@@ -23,6 +23,8 @@
 .card{
   position: relative;
   filter: grayscale(1);
+  /* transición */
+  transition-duration: 1s;
 }
 
 .card:hover{
@@ -77,4 +79,18 @@
 .card:nth-of-type(9){
   grid-column: 2 / 3;
   grid-row: 4 / 5;
+}
+
+/* animación */
+@keyframes entrada {
+  0%{
+    /* no se va a ver */
+    transform: scale(0);
+  }
+  70%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
