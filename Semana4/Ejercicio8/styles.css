@@ -70,3 +70,23 @@ section{
   margin-bottom: 20px;
 }
 
+.icon-play{
+  width:40px;
+}
+
+.grid-explorar{
+  display:grid;
+  gap:20px;
+}
+
+.cuadro{
+  padding:20px;
+  overflow: hidden;
+  border-radius:10px;
+  height:260px;
+}
+
+.img-cuadro{
+  width: 150px;
+  transform: translate(120px, 90px) rotate(30deg);
+}
