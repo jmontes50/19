@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* temporal */
+    border:1px solid red;
+}
+
+.contenedor{
+  min-width:800px;
+  max-height: 1200px;
+  min-height: 1000px;
+  margin:0 auto;
+  padding:40px;
+  /* grid */
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  grid-template-rows: repeat(4, minmax(150px, 1fr));
+  gap: 20px;
+}
