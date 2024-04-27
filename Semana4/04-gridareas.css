@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    border:2px solid lightgray;
+}
+
+.contenedor{
+    display: grid;
+    height:100vh;
+    grid-template-areas: 
+    "cabecera cabecera cabecera cabecera"
+    "principal principal principal publicidad"
+    "principal principal principal publicidad"
+    "principal principal principal publicidad"
+    "pie pie pie pie"
+    "pie pie pie pie"
+    ;
+}
+
+header{
+    background-color: green;
+    grid-area:cabecera;
+}
+
+main{
+    background-color: blue;
+    grid-area:principal;
+}
+
+aside{
+    background-color: pink;
+    grid-area:publicidad;
+}
+
+footer{
+    background-color: orange;
+    grid-area:pie;
+}
