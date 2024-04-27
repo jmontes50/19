@@ -10,7 +10,7 @@
   --genre-color01: #55a891;
   --genre-color02: #27856a;
   --genre-color03: #5f8109;
-
+  --genre-color04: #5e073b;
   --genre-color05: #f037a5;
   --genre-color06: #af2896;
   --genre-color07: #af2896;
@@ -77,6 +77,7 @@ section{
 .grid-explorar{
   display:grid;
   gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .cuadro{
@@ -89,4 +90,56 @@ section{
 .img-cuadro{
   width: 150px;
   transform: translate(120px, 90px) rotate(30deg);
+}
+
+.cuadro:nth-of-type(1){
+  background-color: var(--genre-color01);
+}
+
+.cuadro:nth-of-type(2){
+  background-color: var(--genre-color02);
+}
+
+.cuadro:nth-of-type(3){
+  background-color: var(--genre-color03);
+}
+
+.cuadro:nth-of-type(4){
+  background-color: var(--genre-color04);
+}
+
+.cuadro:nth-of-type(5){
+  background-color: var(--genre-color05);
+}
+
+.cuadro:nth-of-type(6){
+  background-color: var(--genre-color06);
+}
+
+.cuadro:nth-of-type(7){
+  background-color: var(--genre-color07);
+}
+
+.cuadro:nth-of-type(8){
+  background-color: var(--genre-color08);
+}
+
+.cuadro:nth-of-type(9){
+  background-color: var(--genre-color09);
+}
+
+.cuadro:nth-of-type(10){
+  background-color: var(--genre-color10);
+}
+
+.cuadro:nth-of-type(11){
+  background-color: var(--genre-color11);
+}
+
+.cuadro:nth-of-type(12){
+  background-color: var(--genre-color12);
+}
+
+.cuadro:nth-of-type(13){
+  background-color: var(--genre-color1);
 }
