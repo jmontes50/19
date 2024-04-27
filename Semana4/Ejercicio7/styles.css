@@ -22,6 +22,15 @@
 
 .card{
   position: relative;
+  filter: grayscale(1);
+}
+
+.card:hover{
+  filter: grayscale(0);
+  transform: translate(0, 5px) scale(1.02) rotate(0.5deg);
+  /* text box shadow */
+  /* sombra X, sombra Yx difuminado color */
+  box-shadow: 0 0 10px black;
 }
 
 .card img{
