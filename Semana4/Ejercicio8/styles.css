@@ -27,7 +27,7 @@
   padding:0;
   box-sizing: border-box;
   /* temporal */
-  border:1px solid red;
+  /* border:1px solid red; */
 }
 
 /* estilos generales */
@@ -49,6 +49,7 @@ section{
   margin:20px 0;
   display: flex;
   gap:20px;
+  overflow-x: scroll;
 }
 
 .tarjeta{
