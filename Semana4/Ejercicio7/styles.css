@@ -25,6 +25,9 @@
   filter: grayscale(1);
   /* transición */
   transition-duration: 1s;
+  animation-duration: 1s;
+  animation-name: entrada;
+  animation-timing-function: ease-out;
 }
 
 .card:hover{
