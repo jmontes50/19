@@ -3,11 +3,12 @@
     padding:0;
     box-sizing: border-box;
     /* temporal */
-    border:1px solid red;
+    /* border:1px solid red; */
 }
 
 .contenedor{
   min-width:800px;
+  max-width: 1200px;
   max-height: 1200px;
   min-height: 1000px;
   margin:0 auto;
@@ -32,4 +33,39 @@
 
 .card p {
   position:relative;
+  color:white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 4px black;
+}
+
+.card:nth-of-type(1){
+  grid-column:1 / 3;
+  grid-row: 1 / 3;
+}
+
+.card:nth-of-type(2){
+  grid-row: 1 / 3;
+}
+
+.card:nth-of-type(3){
+  grid-row: 1 / 3;
+}
+
+.card:nth-of-type(4){
+  grid-column: 2 / 4;
+}
+
+.card:nth-of-type(5){
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+.card:nth-of-type(8){
+  grid-column: 3 / 5;
+}
+
+.card:nth-of-type(9){
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
 }
