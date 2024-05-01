@@ -1,0 +1,6 @@
+.btn-primary {
+    /* esto puede estar aquí como en una hoja de estilos .css aparte */
+    /* !important para obligar que un estilo se ejecute, no es buena práctica se pierde especificidad */
+  /* background-color: peru !important; */
+  background-color: peru;
+}
