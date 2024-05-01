@@ -15,7 +15,7 @@
     <!-- nav -->
     <!-- navbar-expand-lg me sirve para indicar cuando va a colapsar el navbar -->
     <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
+      <div class="container">
         <a class="navbar-brand" href="#">Dev</a>
         <!-- class="navbar-toggler", indica que sera el elemento que permitira el colapso de los elementos dentro de collapse -->
         <!--
@@ -31,9 +31,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="idElementoAColapsar">
-          <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0"
-          >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
@@ -43,12 +41,26 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
-        </ul>
+          </ul>
         </div>
       </div>
     </nav>
+    <!-- header -->
+    <header
+      class="container d-flex justify-content-center align-items-center flex-column p-5 my-4"
+    >
+      <h1 class="display-6">Album example</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla vel eos
+        mollitia sint soluta non nisi quod cumque ipsum corporis?
+      </p>
+      <div>
+        <button class="btn btn-primary">Acción Principal</button>
+        <button class="btn btn-secondary">Acción Secundaria</button>
+      </div>
+    </header>
 
-    <!-- justo antes de finalizar el </body> -->
+    <!-- justo antes de finalizar el body -->
     <!-- buscar dentro del html ya existente -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
