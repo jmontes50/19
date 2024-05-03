@@ -31,3 +31,38 @@ nav .links li a {
   text-decoration: none;
   color: white;
 }
+
+.publicidad, .noticia, .primicia {
+  padding: 20px;
+  color: indianred;
+  text-shadow: 1px 1px 3px white;
+  font-size: 18px;
+}
+
+.primicia {
+  font-weight: bold;
+}
+
+.noticia {
+  text-decoration: underline;
+}
+
+.publicidad {
+  border: 1px solid red;
+}
+
+.avatar {
+  width: 200px;
+  border: 2px solid white;
+  -webkit-box-shadow: 1px 1px 10px white;
+          box-shadow: 1px 1px 10px white;
+  border-radius: 50%;
+}
+
+.redondo {
+  padding: 20px;
+  border: 2px solid white;
+  -webkit-box-shadow: 1px 1px 10px white;
+          box-shadow: 1px 1px 10px white;
+  border-radius: 10px;
+}

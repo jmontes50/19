@@ -37,3 +37,54 @@ nav {
     }
   }
 }
+
+// extends - es código reutilizable
+//para crear un extend necesito:
+//%nombreExtend
+
+%parrafos {
+  padding:20px;
+  color:indianred;
+  text-shadow:1px 1px 3px white;
+  font-size: 18px;
+}
+
+.primicia {
+  // @extend %nombreExtend
+  @extend %parrafos;
+  font-weight:bold;
+}
+
+.noticia {
+  @extend %parrafos;
+  text-decoration: underline;
+}
+
+.publicidad {
+  @extend %parrafos;
+  border:1px solid red;
+}
+
+// mixins - es reutilizable en forma de función
+// calc(10px + 5px)
+// función entran valores -> sale/retorna un resultado
+// @mixin nombre (){}
+@mixin border-radius ($radius) {
+  // el codigo que indique dentro del mixin
+  //sera el que sea retornado
+  border:2px solid white;
+  box-shadow: 1px 1px 10px white;
+  // interesante
+  border-radius: $radius;
+}
+
+.avatar{
+  width: 200px;
+  // include, para ser utilizado en otro bloque de codigo
+  @include border-radius(50%);
+}
+
+.redondo {
+  padding:20px;
+  @include border-radius(10px);
+}
