@@ -14,3 +14,26 @@ body {
   color: $primary-color;
   font-family: $main-font;
 }
+
+// nav .links li a   <--- esto seria en CSS
+// nesting
+
+nav {
+  background-color:firebrick;
+
+  .links {
+    display: flex;
+    gap:20px;
+    align-items: center;
+
+    li {
+      list-style: none;
+      font-weight: bold;
+
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

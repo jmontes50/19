@@ -10,3 +10,24 @@ body {
   color: peru;
   font-family: Arial, sans-serif;
 }
+
+nav {
+  background-color: firebrick;
+}
+nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav .links li {
+  list-style: none;
+  font-weight: bold;
+}
+nav .links li a {
+  text-decoration: none;
+  color: white;
+}
