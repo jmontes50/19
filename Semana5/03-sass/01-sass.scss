@@ -1,7 +1,7 @@
 //Al utilizar SCSS podemos seguir utilizando CSS
-// variables
-$primary-color: peru;
-$main-font: Arial, sans-serif;
+
+// @import podemos importar el codigo de otro archivo
+@import 'variables';
 
 * {
   margin: 0;
