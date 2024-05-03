@@ -1,0 +1,19 @@
+// _button
+
+@import 'base/variables';
+@import 'base/mixins';
+
+.button {
+    padding: 10px 20px;
+    border:none;
+    border-radius: $border-radius;
+    background-color: $color-primary;
+    color: white;
+    cursor:pointer;
+    transition: all 0.5s;
+
+    &:hover{
+        // mixin de scss
+        background-color: darken($color-primary, 10%);
+    }
+}
