@@ -1,4 +1,8 @@
 //Al utilizar SCSS podemos seguir utilizando CSS
+// variables
+$primary-color: peru;
+$main-font: Arial, sans-serif;
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +11,6 @@
 
 body {
   background-color: aquamarine;
+  color: $primary-color;
+  font-family: $main-font;
 }
