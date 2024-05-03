@@ -66,3 +66,20 @@ nav .links li a {
           box-shadow: 1px 1px 10px white;
   border-radius: 10px;
 }
+
+.btn {
+  padding: 20px;
+  background-color: steelblue;
+  color: white;
+}
+.btn:hover {
+  font-weight: bold;
+  -webkit-box-shadow: 2px 2px 10px white;
+          box-shadow: 2px 2px 10px white;
+}
+.btn--shadow {
+  -webkit-box-shadow: 2px 2px 10px black;
+          box-shadow: 2px 2px 10px black;
+  background-color: lightblue;
+  color: black;
+}

@@ -88,3 +88,20 @@ nav {
   padding:20px;
   @include border-radius(10px);
 }
+
+// operador &, puede referenciar el selector padre
+.btn {
+  padding:20px;
+  background-color: steelblue;
+  color:white;
+  // ampersand -> ocho con colita - Y
+  &:hover{
+    font-weight:bold;
+    box-shadow: 2px 2px 10px white;
+  }
+  &--shadow{
+    box-shadow: 2px 2px 10px black;
+    background-color: lightblue;
+    color:black
+  }
+}
