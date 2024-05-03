@@ -1,0 +1,30 @@
+// card
+@import 'base/variables';
+@import 'base/mixins';
+
+.card{
+    background-color: #eeeeee;
+    border-radius: $border-radius;
+    padding:20px;
+    max-width: 400px;
+    @include box-shadow(1px, 2px, 4px, lightgray);
+
+    &__img{
+        max-width: 100%;
+    }
+
+    &__header{
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    &__content{
+        color: $color-primary;
+    }
+
+    &__button {
+        @extend .button;
+        margin-top:20px;
+    }
+}
