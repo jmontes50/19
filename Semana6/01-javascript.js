@@ -47,4 +47,23 @@ console.log("typeof boolean", typeof meQuiere);
 
 //Le podemos dar más de un argumento
 //puedo hacer que imprima una cosa detrás de otra
-console.log("este numero es:", 100)
+console.log("este numero es:", 100);
+
+//undefined
+let porDefinir;
+console.log("no esta definido", porDefinir);
+console.log("tipo undefined:", typeof porDefinir);
+
+//null
+let noHayNada = null;
+console.log("este es un null:", noHayNada);
+console.log("tipo null:", typeof noHayNada);
+
+let anio = 2024;
+console.log("año1: ", anio);
+//podemos darle un nuevo valor;
+anio = 2025;
+console.log("año2: ", anio);
+//Que una variable al cambiar su valor, puede cambiar también de tipo de dato
+anio = "DOS MIL VEINTICINCO";
+console.log("año3: ", anio);
