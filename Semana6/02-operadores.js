@@ -23,3 +23,34 @@ console.log("C/cuota es", cuotas);
 //queremos comprar varias, multiplicación
 let totalPorDos = precioConDscto * 2;
 console.log("precio por dos unid. ", totalPorDos);
+
+let gananciaEmpresa = 1.15;
+let precioFinal = ((precioConDscto * 2) + adicionales) * gananciaEmpresa;
+console.log("PrecioFinal: ", precioFinal);
+
+// operador módulo, se refiere al residuo, y usa el símbolo de %
+let modulo = 1000 % 300;
+console.log("Módulo: ", modulo);
+
+//auto incrementos
+
+let a = 10;
+// a = a + 1;
+a++;
+console.log("a: ", a);
+
+let b = 20;
+// b = b + 5;
+b+=5;
+console.log('b: ', b);
+
+//decrementar
+let c = 30;
+// c = c - 1;
+c--;
+console.log('c: ', c);
+
+let d = 40;
+// d = d - 7;
+d -= 7;
+console.log('d: ', d);
