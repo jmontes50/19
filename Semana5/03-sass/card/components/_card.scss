@@ -6,7 +6,6 @@
     background-color: #eeeeee;
     border-radius: $border-radius;
     padding:20px;
-    max-width: 400px;
     @include box-shadow(1px, 2px, 4px, lightgray);
 
     &__img{

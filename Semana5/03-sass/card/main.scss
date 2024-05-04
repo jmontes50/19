@@ -1,1 +1,16 @@
 // el archivo principal
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'components/card';
+@import 'components/button';
+
+.page {
+    @include flex-center;
+    height: 100vh;
+    font-family: $main-font;
+
+    .card{
+        max-width: 400px;
+    }
+}
