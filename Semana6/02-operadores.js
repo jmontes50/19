@@ -54,3 +54,18 @@ let d = 40;
 // d = d - 7;
 d -= 7;
 console.log('d: ', d);
+
+// concatenar
+let nombre = "José";
+let saludo = "Hola " + nombre;
+let apellido = 'Guevara';
+console.log(saludo);
+console.log("hay que tener cuidado con: ", 10 + "5");
+
+// concatenar con template string -> ${JAVASCRIPT, variables, etc}
+// backtick, comillas invertidas `` alt+96
+let despedida = `Nos vemos 
+${nombre} ${apellido} 
+hasta luego ${10 + 20}` + ", cya";
+
+console.log("Despedida: ", despedida);
