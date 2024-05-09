@@ -32,4 +32,4 @@ switch(true){
     break;
   default:
     console.log("Elegiste una opción inválida");
-} 
+};
