@@ -34,6 +34,7 @@ let estaAcompanado = confirm("Esta acompanad@ por un adulto?");
 
 if( edadNum > 60 ){
   console.log("Tiene descuentos en tequeños");
+  // } else if (edadNum >= 30) {
 } else if (edadNum >= 30 && edadNum <= 60) {
   console.log("Tiene derecho a una bebida");
 } else if ( edadNum >= 18 && edadNum < 30 ) {
