@@ -45,4 +45,9 @@ for(let i = 0; i < precios.length; i++){
     // numPresupuesto -= precios[i];
     numPresupuesto = numPresupuesto - precios[i];
   }
+  // preguntar para finalizar todo
+  let finalizar = confirm('Desea seguir comprando????');
+  if(!finalizar){
+    break;
+  }
 }
