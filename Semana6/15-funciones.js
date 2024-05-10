@@ -4,6 +4,7 @@
 //costo + 15% + igv (18%)
 
 //function nombreFuncion(recibir parametros)
+/*
 function calcularPrecio (costo){
   let ganancia = 1.15;
   let igv = 1.18;
@@ -13,3 +14,18 @@ function calcularPrecio (costo){
 
 
 calcularPrecio(100);
+calcularPrecio(45);
+*/
+
+//solamente se encargue de la parte principal
+function calcularViaje(pasaje, comida, estadia, dias){
+  let costoDiario = comida + estadia;
+  let costoTotalDias = costoDiario * dias;
+  let costoTotal = costoTotalDias + pasaje;
+  // retornar un valor
+  return costoTotal;
+}
+
+let resultadoViaje = calcularViaje(100, 60, 50, 5);
+
+console.log(resultadoViaje);
