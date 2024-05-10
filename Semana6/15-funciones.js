@@ -29,3 +29,31 @@ function calcularViaje(pasaje, comida, estadia, dias){
 let resultadoViaje = calcularViaje(100, 60, 50, 5);
 
 console.log(resultadoViaje);
+
+//separar varias cosas en funciones
+//Single Responsability, una sola responsabilidad...
+
+//Arroz chaufa
+//picar vegetales
+//granear arrox
+//freir pollo, huevo
+
+function picarVegetales(){
+  console.log('... picando vegetales...');
+}
+
+function granearArroz(){
+  console.log('... graneando arroz...');
+}
+
+function freirPolloYHuevo(){
+  console.log('... freir pollo huevo...');
+}
+
+function prepararArrozChaufa (){
+  picarVegetales()
+  granearArroz()
+  freirPolloYHuevo()
+}
+
+prepararArrozChaufa()
