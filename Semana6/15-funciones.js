@@ -50,10 +50,13 @@ function freirPolloYHuevo(){
   console.log('... freir pollo huevo...');
 }
 
+//HOISTING, las function se consideran como si estuviera en el top
+// prepararArrozChaufa();
+
 function prepararArrozChaufa (){
   picarVegetales()
   granearArroz()
   freirPolloYHuevo()
 }
 
-prepararArrozChaufa()
+prepararArrozChaufa();
