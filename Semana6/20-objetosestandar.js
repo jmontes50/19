@@ -53,3 +53,5 @@ let productosCaros = productos.filter(function (regalo) {
 })
 
 console.log(productosCaros);
+
+//map, forEach, reduce.
