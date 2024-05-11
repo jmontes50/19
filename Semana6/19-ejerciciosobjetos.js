@@ -42,3 +42,17 @@ let alumnos = [
     notas: [13, 19, 17]
   },
 ]
+
+//en base al arreglo de estudiantes calcular el promedio de cada uno en base a sus notas
+
+//alumno por alumno, sumando las notas y dividiendo entre 3. 
+
+for (let i = 0; i < alumnos.length; i++) {
+  console.log("i: ", alumnos[i]);
+  //hacer otro for para las notas
+  let sumaNotas = 0;
+  for (let j = 0; j < alumnos[i].notas.length; j++) {
+    sumaNotas = sumaNotas + alumnos[i].notas[j]
+  }
+  console.log(`${alumnos[i].nombre} tiene un promedio de: ${sumaNotas / 3}`);
+}
