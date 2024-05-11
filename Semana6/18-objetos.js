@@ -59,6 +59,7 @@ let albumMusical = {
   fecha: '30/01/2012',
   generos: ['Cumbia', 'Salsa'],
   canciones: [
+    //todas van a ser canciones, array de canciones
     {
       titulo: ' El ritmo de mi corazón',
       duracion: 3.43,
