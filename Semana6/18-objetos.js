@@ -45,9 +45,36 @@ let deportistas = [
     deporte: "Fútbol"
   }
 ];
-
+/*
 console.log(deportistas);
 
 console.log(deportistas[1]);
 
 console.log(deportistas[1].nombre);
+*/
+
+let albumMusical = {
+  agrupacion: 'Grupo 5',
+  nombre: 'El Ritmo de mi corazón',
+  fecha: '30/01/2012',
+  generos: ['Cumbia', 'Salsa'],
+  canciones: [
+    {
+      titulo: ' El ritmo de mi corazón',
+      duracion: 3.43,
+      autores: ["Gianmarco Zignago", 'Dantes Cardosa']
+    },
+    {
+      titulo: 'Mi buen amor',
+      duracion: 4.48,
+      autores: ["Gloria Estefan", "Estefano", 'Dantes Cardosa']
+    },
+  ],
+  produccion: {
+    arreglos: ['Elmer Yaipen', 'Andy Yaipen'],
+    "direccion-general": 'Elmer Yaipen'
+  }
+}
+
+console.log(albumMusical.generos[1]);
+console.log(albumMusical.canciones[0].autores[0]);
