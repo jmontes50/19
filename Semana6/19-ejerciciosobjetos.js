@@ -56,3 +56,4 @@ for (let i = 0; i < alumnos.length; i++) {
   }
   console.log(`${alumnos[i].nombre} tiene un promedio de: ${sumaNotas / 3}`);
 }
+//Math.round(num * 100)/100
