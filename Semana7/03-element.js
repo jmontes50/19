@@ -21,3 +21,22 @@ imagen.setAttribute("src", "https://s.t13.cl/sites/default/files/styles/manualcr
 imagen.setAttribute("alt", "pato de goma");
 
 imagen.style.width = "500px";
+//PROS: al ser un objeto element ya tengo la referencia incluso de antes que se agregue, es como a prueba de errores
+//DESVENTAJA: ABSTRACTO
+
+/**
+ * Crear 01 solo elemento y a ese elemento añadirle HTML
+ *
+ */
+
+let deportes = document.getElementById("deportes");
+
+let divDeportes = document.createElement('div');
+
+divDeportes.innerHTML = `
+  <p id="parrafo1">lorem ipsum</p>
+  <p id="parrafo2">lorem ipsum2</p>
+  <button id="btn">Hazme click!!!</button>
+`
+
+deportes.appendChild(divDeportes)
