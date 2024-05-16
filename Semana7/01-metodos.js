@@ -48,3 +48,6 @@ let productosMasBaratos = productos.filter(function (prod) {
 })
 
 console.table(productosMasBaratos);
+
+//1. (No todo) pero podemos pensar en general como que todo es un objeto en JS
+//2. al ser objeto todo, esto trae cosas útiles y muchas veces no tenemos que implementar la lógica de 0 para obtener un resultado que necesitemos, no tenemos que reinventar la rueda
