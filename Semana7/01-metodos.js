@@ -37,6 +37,14 @@ console.log("por cada: ", porCadaNumero);
 
 let porDos = numeros.map(function (item) {
   return item * 2;
-})
+});
 
 console.log("por dos: ", porDos);
+
+//SANDBOX
+//deseo los productos menores a 800 dólares
+let productosMasBaratos = productos.filter(function (prod) {
+  return prod.precio < 800;
+})
+
+console.table(productosMasBaratos);
