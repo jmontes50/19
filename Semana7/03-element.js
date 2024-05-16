@@ -39,4 +39,9 @@ divDeportes.innerHTML = `
   <button id="btn">Hazme click!!!</button>
 `
 
-deportes.appendChild(divDeportes)
+//algo que podemos aplicar es querySelector, pero en el elemento
+let boton = divDeportes.querySelector("#btn");
+
+console.log(boton)
+
+deportes.appendChild(divDeportes);
