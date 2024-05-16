@@ -18,11 +18,25 @@ let productos = [
 // console.log(productos[0].precio);
 
 let numeros = [1, 2, 3, 4, 5];
-
-let numerosGrandes = numeros.filter(function (num) {
-  // console.log(num);
+// filter me va a retornar un arreglo nuevo
+let numerosGrandes = numeros.filter(function (numero) {
+  // console.log(numero);
   // retornar una expresion que me de V o F
-  return num > 2.5;
+  return numero > 3;
 })
 
 console.log("num grandes", numerosGrandes);
+
+// forEach ejecuta algo por cada uno, nada más pero al final NO ME RETORNA NADA
+let porCadaNumero = numeros.forEach(function (num) {
+  // console.log(num + 2)
+  return num;
+});
+
+console.log("por cada: ", porCadaNumero);
+
+let porDos = numeros.map(function (item) {
+  return item * 2;
+})
+
+console.log("por dos: ", porDos);
