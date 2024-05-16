@@ -29,8 +29,9 @@ console.log(main)
 main.innerHTML = `
 <article>
   <h2>Chat GPT anuncio capacidades en audio e imagenes</h2>
-  <p>Texto de relleno</p>
+  <p id="parrafo">Texto de relleno</p>
 </article>`
+//Una vez ya renderizado/dibujado dentro del DOC html ya se puede seleccionar
 
 let input = document.getElementById("email");
 console.log("value: ", input.value);
