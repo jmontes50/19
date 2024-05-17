@@ -28,3 +28,11 @@ console.log("perroJS", perroJS);
 let platosJS = JSON.parse(platosJSON);
 
 console.log("platosJS", platosJS);
+
+//---------Local Storage
+//ls.setItem("clave", valor)
+localStorage.setItem('petjson', perroJSON);
+
+let data = localStorage.getItem("petjson");
+
+console.log(data)
