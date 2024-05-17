@@ -66,7 +66,7 @@ btnAgregar.addEventListener("click", function () {
 })
 
 leerTareasLS()
-
+//en caso deseen borrar todo el LS, pueden utilizr el método localStorage.clear();
 
 
 
