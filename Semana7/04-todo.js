@@ -45,6 +45,16 @@ function guardarTareaLS() {
     localStorage.setItem("todo", listaTareasJSON);
 }
 
+function leerTareasLS() {
+    //cuando obtenemos el valor de LS con getItem lo obtenemos como string
+    let tareasObtenidas = localStorage.getItem("todo");
+    let listaTareasJS = JSON.parse(tareasObtenidas);
+    // console.log("lista JS: ", listaTareasJS)
+    //no es la mejor manera
+    listaTareas = listaTareasJS;
+    dibujarTareas();
+}
+
 btnAgregar.addEventListener("click", function () {
     let textoObtenido = obtenerTarea();
     console.log("textoObtenido", textoObtenido);
@@ -55,6 +65,7 @@ btnAgregar.addEventListener("click", function () {
     dibujarTareas();
 })
 
+leerTareasLS()
 
 
 
