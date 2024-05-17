@@ -35,4 +35,4 @@ localStorage.setItem('petjson', perroJSON);
 
 let data = localStorage.getItem("petjson");
 
-console.log(data)
+console.log(data);

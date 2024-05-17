@@ -39,12 +39,19 @@ function dibujarTareas() {
     ulTareas.innerHTML = htmlTareas;
 }
 
+function guardarTareaLS() {
+    //recordemos el LS solamente me permite Texto
+    let listaTareasJSON = JSON.stringify(listaTareas);
+    localStorage.setItem("todo", listaTareasJSON);
+}
+
 btnAgregar.addEventListener("click", function () {
     let textoObtenido = obtenerTarea();
     console.log("textoObtenido", textoObtenido);
     // push es un método que me permite añadir algo a un arreglo
     listaTareas.push(textoObtenido);
     console.table(listaTareas);
+    guardarTareaLS();
     dibujarTareas();
 })
 
