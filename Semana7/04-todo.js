@@ -28,12 +28,24 @@ function obtenerTarea() {
 
 let listaTareas = [];
 
+function dibujarTareas() {
+    let htmlTareas = "";
+    //estamos añadiendo codigo html a htmlTareas
+    listaTareas.forEach(function (item) {
+        htmlTareas = htmlTareas + `
+            <li>${item}</li>
+        `
+    });
+    ulTareas.innerHTML = htmlTareas;
+}
+
 btnAgregar.addEventListener("click", function () {
     let textoObtenido = obtenerTarea();
     console.log("textoObtenido", textoObtenido);
     // push es un método que me permite añadir algo a un arreglo
     listaTareas.push(textoObtenido);
     console.table(listaTareas);
+    dibujarTareas();
 })
 
 
