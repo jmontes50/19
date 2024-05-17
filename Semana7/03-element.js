@@ -21,7 +21,7 @@ imagen.setAttribute("src", "https://s.t13.cl/sites/default/files/styles/manualcr
 imagen.setAttribute("alt", "pato de goma");
 
 imagen.style.width = "500px";
-//PROS: al ser un objeto element ya tengo la referencia incluso de antes que se agregue, es como a prueba de errores
+//PROS: al ser un objeto element ya tengo la referencia incluso de antes que se agregue al html, es como a prueba de errores
 //DESVENTAJA: ABSTRACTO
 
 /**

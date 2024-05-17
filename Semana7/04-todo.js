@@ -7,11 +7,55 @@
  * 
  */
 
+/** 2. resolver el algoritmo
+ * Objetivo: Mostrar una lista de tareas con lo que tengo en el html mediante el manejo del DOM
+ * 2.1 Necesito obtener el ingreso del usuario dentro del input
+ * 2.2 Necesito la acción del button, el click del button
+ * 2.3 ul para mostrar las tareas agregadas
+ * 
+ */
+
 //tener las referencias arriba
 let inputTarea = document.getElementById("idTarea");
 let btnAgregar = document.getElementById("btnAgregar");
+//selector que acepta nomenclatura de CSS
 let ulTareas = document.querySelector(".tareas");
 
+function obtenerTarea() {
+    let textoTarea = inputTarea.value;
+    return textoTarea;
+}
+
+let listaTareas = [];
+
+btnAgregar.addEventListener("click", function () {
+    let textoObtenido = obtenerTarea();
+    console.log("textoObtenido", textoObtenido);
+    // push es un método que me permite añadir algo a un arreglo
+    listaTareas.push(textoObtenido);
+    console.table(listaTareas);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* primera versión del ejercicio
 let tareas = [];
 
 btnAgregar.addEventListener('click', function () {
@@ -32,3 +76,4 @@ function renderizarTareas(arrTareas) {
     })
     return htmlTareas
 }
+*/
