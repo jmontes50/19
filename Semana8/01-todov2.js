@@ -40,3 +40,12 @@ function ItemTarea(tarea) {
     <input type="checkbox" class="form-check-input">
   `
 }
+
+function dibujarTareas(elemTarea) {
+  //obtiene referencia del ul en el html
+  let ul = document.getElementById('tareas');
+  //lo limpia como si fuera una pizarra
+  ul.innerHTML = "";
+  //agrego un nuevo elemento al ul
+  ul.appendChild(elemTarea);
+}
