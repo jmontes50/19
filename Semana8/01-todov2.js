@@ -53,6 +53,12 @@ function ItemTarea(task, index) {
   //getAttribute obtiene el valor de un atributo
   let numIndex = +checkbox.getAttribute('data-id');
   console.log("numIndex: ", typeof numIndex)
+  checkbox.addEventListener('click', function (evento) {
+    //evento.target me dice de donde vino el evento
+    console.log("evento: ", evento.target.checked)
+    dataTareas[numIndex].completada = evento.target.checked;
+    console.table(dataTareas)
+  })
   return li;
 }
 
