@@ -26,3 +26,17 @@ btnTarea.addEventListener('click', function () {
   dataTareas.push(nuevaTarea);
   console.table(dataTareas)
 })
+
+// componente
+//tener agrupada la lógica y apariencia de un conjunto de elementos en html
+function ItemTarea(tarea) {
+  //devolverme un elemento LI que represente una tarea, con toda su apariencia y toda su lógica
+  let li = document.createElement('li');
+  //añadir una clase a un elemento
+  li.classList.add('list-group-item');
+  //estamos rellenando el elemento LI
+  li.innerHTML = `
+    <span>Nueva Tarea</span>
+    <input type="checkbox" class="form-check-input">
+  `
+}
