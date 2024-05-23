@@ -45,7 +45,12 @@ function ItemTarea(task, index) {
   //es un atributo de tipo data, lo que hace es guardar info
   li.innerHTML = `
     <span>${task.tarea}</span>
-    <input type="checkbox" class="form-check-input" data-id="${index}">
+    <input 
+      type="checkbox"
+      class="form-check-input"
+      data-id="${index}" 
+      ${task.completada === true ? "checked" : ""}
+    >
   `
   //querySelector obtiene un elemento usando la sintaxis de CSS . # tag
   let checkbox = li.querySelector('input[type=checkbox]');
