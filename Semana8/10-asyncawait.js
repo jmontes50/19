@@ -26,7 +26,9 @@ ejecutar()
 */
 
 const ejecuto = async () => {
-  try {
+  try { //NO ES SOLO PARA PROMESAS, PERMITE CAPTURAR ERRORES 
+    //si un codigo no les funciona y no ven errores prueben con
+    //trycatch
     //intenta prueba
     const resultado = await ejecutar(); //espere ⌛
     console.log(resultado);
