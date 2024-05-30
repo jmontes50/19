@@ -14,8 +14,12 @@ const App = () => {
     // 2.1 en el return SOLAMENTE se retorna 01 SOLO ELEMENTO
     // <> es un Fragment
     <> 
-      <h2>{titulo}</h2>
+      <h2 className="red">{titulo}</h2>
       <p>{saludo()} Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ullam voluptatum cupiditate.{50 + 60}</p>
+      <label htmlFor="nombre">Nombre:</label>
+      {/* TODA ETIQUETA TIENE QUE TENER SU CIERRE */}
+      <input id="nombre" />
+      {/* onClick, onSubmit, onDoubleClick, onChange */}
       <button onClick={(evento) => {alert("Hola!!!! " + evento.target.innerHTML)}}>
         Click!
       </button>
