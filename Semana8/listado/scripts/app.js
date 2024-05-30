@@ -1,3 +1,12 @@
 import { obtenerUsuarios } from "./service.js";
 
-obtenerUsuarios();
+const main = async () => {
+  try {
+    const usuarios = await obtenerUsuarios();
+    console.log(usuarios)
+  } catch (error) {
+    console.log(error)
+  }
+};
+
+main();
