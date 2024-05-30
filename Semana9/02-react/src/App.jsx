@@ -5,6 +5,10 @@ const App = () => {
 
   const saludo = () => "Hola";
 
+  const adios = () => {
+    alert("Byes!!!!")
+  }
+
   // 2. tiene que retornar JSX (html)
   return (
     // 2.1 en el return SOLAMENTE se retorna 01 SOLO ELEMENTO
@@ -12,6 +16,12 @@ const App = () => {
     <> 
       <h2>{titulo}</h2>
       <p>{saludo()} Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ullam voluptatum cupiditate.{50 + 60}</p>
+      <button onClick={(evento) => {alert("Hola!!!! " + evento.target.innerHTML)}}>
+        Click!
+      </button>
+      <button onClick={adios}>
+        Byes!!
+      </button>
     </>
   )
 }
