@@ -1,9 +1,20 @@
-const Contador = () => {
+import { useState } from "react";
 
+const Contador = () => {
+  // let variable = 1;
+  const [variable, setVariable] = useState(1);
+  console.log("Cambio!!! ", variable)
   return (
     <>
-    <span>{0}</span>
-    <button>Incrementar</button>
+    <span>{variable}</span>
+    <br />
+    {/* <button onClick={() => {variable = variable++}}> */}
+    <button onClick={() => {
+      setVariable(variable + 2)
+    }}
+    >
+      Incrementar
+    </button>
     </>
   )
 }

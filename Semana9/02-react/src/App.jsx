@@ -34,6 +34,8 @@ const App = () => {
       <button onClick={adios}>
         Byes!!
       </button>
+      <hr />
+      <Contador />
     </>
   )
 }
