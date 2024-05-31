@@ -3,7 +3,8 @@ import { obtenerUsuarios } from "./service.js";
 const main = async () => {
   try {
     const usuarios = await obtenerUsuarios();
-    console.table(usuarios.data)
+    console.table(usuarios.data);
+    dibujarUsuarios(usuarios.data);
   } catch (error) {
     console.log(error)
   }
