@@ -7,6 +7,15 @@ const App = () => {
   const [pagina, setPagina] = useState(1);
   const [totalPaginas, setTotalPaginas] = useState(1);
 
+  const options = (num) => {
+    let opts = [];
+    for(let i = 1; i <= num; i++){
+      opts.push(<option value={i} key={i}>Página {i}</option>)
+    }
+    console.log("OPTS: ", opts)
+    return opts;
+  }
+
   useEffect(() => {
     axios
       // .get("https://reqres.in/api/users?page=2")
@@ -25,8 +34,9 @@ const App = () => {
 
   return (
     <div>
+      {/* quiero mostrar la página en la que estoy */}
       <select>
-
+        {options(totalPaginas)}
       </select>
       {/* renderizado de listas, de datos a JSX */}
       {usuarios.map((user, index) => (
