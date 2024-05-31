@@ -2,7 +2,7 @@ const Titulo = () => {
   
   return (
     <h2>
-      Titulo
+      Titulo Component
     </h2>
   )
 }

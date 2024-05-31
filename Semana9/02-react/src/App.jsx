@@ -1,3 +1,5 @@
+// importar el componente, no necesita ponerse la extensión, no hay necesidad de poner .jsx .js
+import Titulo from "./Titulo";
 
 //1. el nombre del componente tiene que comenzar con mayúsculas
 const App = () => {
@@ -14,7 +16,8 @@ const App = () => {
     // 2.1 en el return SOLAMENTE se retorna 01 SOLO ELEMENTO
     // <> es un Fragment
     <> 
-      <h2 className="red">{titulo}</h2>
+      {/* <h2 className="red">{titulo}</h2> */}
+      <Titulo />
       <p>{saludo()} Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ullam voluptatum cupiditate.{50 + 60}</p>
       <label htmlFor="nombre">Nombre:</label>
       {/* TODA ETIQUETA TIENE QUE TENER SU CIERRE */}
