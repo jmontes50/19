@@ -10,7 +10,7 @@ const App = () => {
       .get("https://reqres.in/api/users?page=2")
       .then((respuesta) => {
         console.log(respuesta.status);
-        console.log(respuesta.data.data);
+        console.log(respuesta.data);
         setUsuarios(respuesta.data.data);
         console.log(usuarios);
       })
@@ -21,9 +21,12 @@ const App = () => {
 
   return (
     <div>
+      <select>
+
+      </select>
       {/* renderizado de listas, de datos a JSX */}
-      {usuarios.map((user) => (
-        <div>{user.email}</div>
+      {usuarios.map((user, index) => (
+        <div key={user.id}>{user.email}</div>
       ))}
     </div>
   );
