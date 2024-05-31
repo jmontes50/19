@@ -7,10 +7,14 @@ const App = () => {
   //declarar variables
   // justo antes del return
   console.log("1. lógica de negocio")
+  // useEffect(funcion, [deps])
   useEffect(() => {
     console.log("3. Hola!");
+  //hace una peticion http a una API
+  //y cuando tenga la respuesta, los datos, actualizar el estado
     // datos condicionales
-  },[])
+  // }, [contador])
+}, [])
 
   return (
     <>
