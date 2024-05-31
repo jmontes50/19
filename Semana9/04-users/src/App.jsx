@@ -4,14 +4,18 @@ import axios from "axios";
 
 const App = () => {
   const [usuarios, setUsuarios] = useState([]);
+  const [pagina, setPagina] = useState(1);
+  const [totalPaginas, setTotalPaginas] = useState(1);
 
   useEffect(() => {
     axios
-      .get("https://reqres.in/api/users?page=2")
+      // .get("https://reqres.in/api/users?page=2")
+      .get(`https://reqres.in/api/users?page=${pagina}`)
       .then((respuesta) => {
         console.log(respuesta.status);
         console.log(respuesta.data);
         setUsuarios(respuesta.data.data);
+        setTotalPaginas(respuesta.data.total_pages);
         console.log(usuarios);
       })
       .catch((error) => {
