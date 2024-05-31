@@ -8,7 +8,10 @@ const App = () => {
   useEffect(() => {
     axios.get('https://reqres.in/api/users?page=2')
     .then((respuesta) => {
-      console.log(respuesta);
+      console.log(respuesta.status);
+      console.log(respuesta.data.data);
+      setUsuarios(respuesta.data.data);
+      console.log(usuarios);
     })
     .catch((error) => {
       console.log(error);
