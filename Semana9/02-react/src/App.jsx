@@ -17,7 +17,11 @@ const App = () => {
     // <> es un Fragment
     <> 
       {/* <h2 className="red">{titulo}</h2> */}
-      <Titulo />
+      <Titulo texto="Denys" numero={1}/>
+      {/* Titulo({texto: "nombre", numero: 1}) */}
+      <Titulo texto="Christian" numero={2}/>
+      <Titulo texto="Renzo" numero={3}/>
+      <Titulo texto="Roy" numero={4}/>
       <p>{saludo()} Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ullam voluptatum cupiditate.{50 + 60}</p>
       <label htmlFor="nombre">Nombre:</label>
       {/* TODA ETIQUETA TIENE QUE TENER SU CIERRE */}

@@ -1,8 +1,8 @@
-const Titulo = () => {
-  
+const Titulo = (props) => {
+  console.log(props)
   return (
     <h2>
-      Titulo Component
+      {props.texto}
     </h2>
   )
 }
