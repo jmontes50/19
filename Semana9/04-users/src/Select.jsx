@@ -1,6 +1,6 @@
 const Select = (props) => {
   console.log("PROPS DE SELECT: ", props);
-  
+  // desestructurando
   const { totalPaginas, pagina, setPagina } = props;
   const options = (num) => {
     let opts = [];
