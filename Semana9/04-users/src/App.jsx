@@ -30,12 +30,18 @@ const App = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [pagina]);
 
   return (
     <div>
       {/* quiero mostrar la página en la que estoy */}
-      <select>
+      {/* componentes controlados, un input deberia estar amarrado a un estado */}
+      <select 
+        value={pagina} 
+        onChange={(evento) => {
+          setPagina(+evento.target.value)
+        }}
+      >
         {options(totalPaginas)}
       </select>
       {/* renderizado de listas, de datos a JSX */}
