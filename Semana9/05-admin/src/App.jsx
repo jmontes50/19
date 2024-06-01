@@ -1,7 +1,12 @@
+import HomeView from "./views/HomeView"
+import Navigation from "./components/Navigation"
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <Navigation />
+      <HomeView />
+    </>
   )
 }
 
