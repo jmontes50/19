@@ -1,4 +1,4 @@
-const convertDateToLocal = (zonaHoraria = "es-ES", fechaYHora) => {
+const convertDateToLocal = (fechaYHora, zonaHoraria = "es-ES") => {
     const options = {
         weekday: 'long',
         year: 'numeric',

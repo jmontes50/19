@@ -1,3 +1,4 @@
+import { convertDateToLocal } from "../utils/utils"
 import CircleColor from "./CircleColor"
 
 const TableProducts = ({ productos }) => {
@@ -21,7 +22,7 @@ const TableProducts = ({ productos }) => {
               <td>{nombre}</td>
               <td>{descripcion}</td>
               <td><CircleColor color={color} /></td>
-              <td>{fecha}</td>
+              <td>{convertDateToLocal(fecha)}</td>
               <td>S/ {precio}</td>
               <td></td>
             </tr>
