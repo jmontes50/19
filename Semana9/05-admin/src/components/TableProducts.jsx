@@ -1,7 +1,9 @@
+import CircleColor from "./CircleColor"
+
 const TableProducts = ({ productos }) => {
   return (
     <>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th>Nombre</th>
@@ -18,7 +20,7 @@ const TableProducts = ({ productos }) => {
             <tr key={id}>
               <td>{nombre}</td>
               <td>{descripcion}</td>
-              <td>{color}</td>
+              <td><CircleColor color={color} /></td>
               <td>{fecha}</td>
               <td>S/ {precio}</td>
               <td></td>
