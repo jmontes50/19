@@ -16,7 +16,7 @@ const obtenerProductos = async () => {
 
 const crearProducto = async (producto) => {
   try {
-    const respuesta = axios.post(`${URL}/productos`, producto);
+    const respuesta = await axios.post(`${URL}/productos`, producto);
     console.log(respuesta)
     return respuesta.data
   } catch (error) {
