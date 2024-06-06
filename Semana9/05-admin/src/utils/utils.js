@@ -11,6 +11,10 @@ const convertDateToLocal = (zonaHoraria = "es-ES", fechaYHora) => {
     //'viernes, 31 de mayo de 2024'
 }
 
+export {
+    convertDateToLocal
+}
+
 /*
 const fecha = new Date("2024-05-31T21:33:58.336Z")
                        
