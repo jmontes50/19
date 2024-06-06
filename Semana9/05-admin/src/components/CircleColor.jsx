@@ -1,7 +1,7 @@
 // TIP: desestructurar al momento de recibir props
 //TIP: Aplicar parámetros por defecto
 const CircleColor = ({ color = "#ffffff" }) => {
-  console.log("Color: ", color);
+  // console.log("Color: ", color);
   // color es hexadecimal
   // podemos aplicar estilos directamente y en react estos pueden utilizarse como un objeto de JS
   //ej en Vanilla JS: elem.style.color = "red" elem.style.backgroundColor = "red"
