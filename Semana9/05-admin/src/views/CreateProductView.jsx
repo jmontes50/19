@@ -69,6 +69,20 @@ const CreateProductView = () => {
             onChange={handleValues}
           />
         </div>
+        {/* color */}
+        <div className="mb-3">
+          <label className="form-label" htmlFor="color">
+            Color
+          </label>
+          <input
+            type="color"
+            className="form-control"
+            id="color"
+            name="color"
+            value={values.color}
+            onChange={handleValues}
+          />
+        </div>
       </div>
     </div>
   );
