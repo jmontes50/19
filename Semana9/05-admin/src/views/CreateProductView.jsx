@@ -83,6 +83,35 @@ const CreateProductView = () => {
             onChange={handleValues}
           />
         </div>
+        {/* categoria */}
+        <div className="mb-3">
+          <label className="form-label" htmlFor="categoria">
+            Categoría
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="categoria"
+            placeholder="Jeans"
+            name="categoria"
+            value={values.categoria}
+            onChange={handleValues}
+          />
+        </div>
+        {/* {fecha} */}
+        <div className="mb-3">
+          <label className="form-label" htmlFor="fecha">
+            Fecha
+          </label>
+          <input
+            type="date"
+            className="form-control"
+            id="fecha"
+            name="fecha"
+            value={values.fecha}
+            onChange={handleValues}
+          />
+        </div>
       </div>
     </div>
   );
