@@ -14,6 +14,17 @@ const obtenerProductos = async () => {
   }
 }
 
+const crearProducto = async (producto) => {
+  try {
+    const respuesta = axios.post(`${URL}/productos`, producto);
+    console.log(respuesta)
+    return respuesta.data
+  } catch (error) {
+    throw error;
+  }
+}
+
 export {
-  obtenerProductos
+  obtenerProductos,
+  crearProducto
 }
