@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import TableProducts from '../components/TableProducts';
 import { obtenerProductos } from '../services/productService';
 
 const HomeView = () => {
@@ -19,7 +20,10 @@ const HomeView = () => {
   }, [])
 
   return (
-    <div>HomeView</div>
+  <div className='container py-3'>
+      <h1 className='mb-4'>Productos</h1>
+      <TableProducts productos={productos}/>
+    </div>  
   )
 }
 

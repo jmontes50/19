@@ -1,4 +1,4 @@
-const TableProducts = (productos) => {
+const TableProducts = ({ productos }) => {
   return (
     <>
       <table class="table">
