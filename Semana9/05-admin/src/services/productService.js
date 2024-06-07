@@ -1,6 +1,6 @@
 import axios from "axios";
-
-const URL = "https://665a7d66003609eda45e0a13.mockapi.io/"
+// necesitamos esto: import.meta.env.VITE_SOMEKEY
+const URL = import.meta.env.VITE_ENDPOINT_BASE;
 
 const obtenerProductos = async () => {
   try {
