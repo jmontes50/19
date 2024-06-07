@@ -10,7 +10,10 @@ const Navigation = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link>
-              <Link to="/createproduct">Crear Producto</Link>
+              <Link to="/" className="nav-link">Panel</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/createproduct" className="nav-link">Crear Producto</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
