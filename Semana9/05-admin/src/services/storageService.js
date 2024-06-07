@@ -7,7 +7,7 @@ const uploadFile = async (imagen) => {
     const refArchivo = ref(storage, "nuevaimagen.jpg");
 
     const resultado = await uploadBytes(refArchivo, imagen);
-    console.loig("Resultado: ", resultado)
+    console.log("Resultado: ", resultado)
   } catch (error) {
     console.log(error)
   }

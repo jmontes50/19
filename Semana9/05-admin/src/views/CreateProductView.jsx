@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { crearProducto } from "../services/productService";
+import { uploadFile } from "../services/storageService";
 // sweetalert2
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -33,15 +34,20 @@ const CreateProductView = () => {
   };
 
   const handleImage = (ev) => {
-    // console.log("handleimage: ", ev.target.files[0]);
+    console.log("handleimage: ", ev.target.files[0]);
     imagen = ev.target.files[0];
   }
 
   const handleSubmit = async (ev) => {
     // prevenir la acción por defecto
     ev.preventDefault();
+    const nuevaImagen = await uploadFile(imagen);
+    console.log(nuevaImagen)
+    /*
     const resultado = await crearProducto(values);
     console.log(resultado);
+    */
+    
     // alert("Producto Creado!")
     // En este caso no me interesa capturar el resultado de Swal.fire porque solamente tenemos un botón (OK)
     await Swal.fire({
