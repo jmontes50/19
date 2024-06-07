@@ -2,6 +2,7 @@ import { useState } from "react";
 import { crearProducto } from "../services/productService";
 // sweetalert2
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CreateProductView = () => {
   const [values, setValues] = useState({
@@ -14,6 +15,9 @@ const CreateProductView = () => {
     opiniones: [],
     fecha: new Date(), //hoy
   });
+
+  // nos da una función para poder navegar de forma imperativa.
+  const navigate = useNavigate();
 
   const handleValues = (ev) => {
     console.log(ev.target.name);
@@ -32,11 +36,14 @@ const CreateProductView = () => {
     const resultado = await crearProducto(values);
     console.log(resultado);
     // alert("Producto Creado!")
-    Swal.fire({
+    // En este caso no me interesa capturar el resultado de Swal.fire porque solamente tenemos un botón (OK)
+    await Swal.fire({
       title:"Producto Creado",
       text:`${values.nombre} se creo exitosamente`,
       icon:"success"
     })
+    // navegacion
+    navigate('/');
   }
 
   return (

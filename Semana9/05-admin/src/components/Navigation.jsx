@@ -9,12 +9,8 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link>
               <Link to="/" className="nav-link">Panel</Link>
-            </Nav.Link>
-            <Nav.Link>
               <Link to="/createproduct" className="nav-link">Crear Producto</Link>
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
