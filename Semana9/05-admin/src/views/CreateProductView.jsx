@@ -4,6 +4,8 @@ import { crearProducto } from "../services/productService";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
+let imagen;
+
 const CreateProductView = () => {
   const [values, setValues] = useState({
     nombre: "",
@@ -29,6 +31,11 @@ const CreateProductView = () => {
     };
     setValues(newProduct);
   };
+
+  const handleImage = (ev) => {
+    // console.log("handleimage: ", ev.target.files[0]);
+    imagen = ev.target.files[0];
+  }
 
   const handleSubmit = async (ev) => {
     // prevenir la acción por defecto
@@ -136,6 +143,16 @@ const CreateProductView = () => {
               onChange={handleValues}
             />
           </div>
+        </div>
+        <div className="mb-3">
+          <label className="form-label" htmlFor="imagen">
+            Foto
+          </label>
+          <input 
+            type="file"
+            className="form-control"
+            onChange={handleImage}
+          />
         </div>
         <button type="submit" className="btn btn-primary btn-lg">
           Crear
