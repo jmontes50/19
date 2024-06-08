@@ -1,3 +1,10 @@
+const nameFileUUID = (nombreArchivo) => {
+  const arrNombreArchivo = nombreArchivo.split(".")
+    //nombre.extension
+  console.log(arrNombreArchivo)
+  
+}
+
 const convertDateToLocal = (fechaYHora, zonaHoraria = "es-ES") => {
     const options = {
         weekday: 'long',
@@ -12,7 +19,8 @@ const convertDateToLocal = (fechaYHora, zonaHoraria = "es-ES") => {
 }
 
 export {
-    convertDateToLocal
+    convertDateToLocal,
+    nameFileUUID
 }
 
 /*

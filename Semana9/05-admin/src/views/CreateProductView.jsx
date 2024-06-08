@@ -4,6 +4,7 @@ import { uploadFile } from "../services/storageService";
 // sweetalert2
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { nameFileUUID } from "../utils/utils";
 
 let imagen;
 
@@ -36,13 +37,17 @@ const CreateProductView = () => {
   const handleImage = (ev) => {
     console.log("handleimage: ", ev.target.files[0]);
     imagen = ev.target.files[0];
+    const resName = nameFileUUID(imagen.name);
+    // console.log(resName)
   }
 
   const handleSubmit = async (ev) => {
     // prevenir la acción por defecto
     ev.preventDefault();
+    /*
     const nuevaImagen = await uploadFile(imagen);
-    console.log(nuevaImagen)
+    console.log(nuevaImagen)¨
+    */
     /*
     const resultado = await crearProducto(values);
     console.log(resultado);
