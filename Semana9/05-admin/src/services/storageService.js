@@ -8,6 +8,7 @@ const uploadFile = async (imagen) => {
     console.log({nameWithExt})
     //referencia del arch vo a subir
     const refArchivo = ref(storage, nameWithExt);
+    // const refArchivo = ref(storage, `fotos/${nameWithExt}`);
 
     const resultado = await uploadBytes(refArchivo, imagen);
     const urlArchivo = await getDownloadURL(refArchivo);
