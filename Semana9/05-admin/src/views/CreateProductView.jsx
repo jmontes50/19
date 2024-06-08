@@ -3,7 +3,7 @@ import { crearProducto } from "../services/productService";
 import { uploadFile } from "../services/storageService";
 // sweetalert2
 import Swal from "sweetalert2";
-import { Form, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import FormProduct from "../components/FormProduct";
 
 let imagen;
