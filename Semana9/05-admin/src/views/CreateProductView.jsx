@@ -3,8 +3,8 @@ import { crearProducto } from "../services/productService";
 import { uploadFile } from "../services/storageService";
 // sweetalert2
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
-// import { nameFileUUID } from "../utils/utils";
+import { Form, useNavigate } from "react-router-dom";
+import FormProduct from "../components/FormProduct";
 
 let imagen;
 
@@ -39,159 +39,61 @@ const CreateProductView = () => {
     imagen = ev.target.files[0];
     // const resName = nameFileUUID(imagen.name);
     // console.log(resName)
-  }
+  };
 
   const handleSubmit = async (ev) => {
     // prevenir la acción por defecto
     ev.preventDefault();
     const { nombre, descripcion, precio } = values;
     //validando el formulario
-    if(nombre === "" || descripcion === "" || precio === "" || precio == 0){
+    if (nombre === "" || descripcion === "" || precio === "" || precio == 0) {
       Swal.fire({
-        title:"Faltan campos por llenar",
-        text:"Verifique el formulario",
-        icon:"error"
-      })
+        title: "Faltan campos por llenar",
+        text: "Verifique el formulario",
+        icon: "error",
+      });
       return;
     }
     //subimos la imagen
     const loading = Swal.fire({
-      title:"Creando producto",
-      text:"Espere por favor...",
-      icon:"info"
-    })
+      title: "Creando producto",
+      text: "Espere por favor...",
+      icon: "info",
+    });
     const urlImagen = await uploadFile(imagen);
     console.log(urlImagen);
     //hacemos una copia del producto, con la info a partir del formulario
     let nuevoProducto = {
       ...values,
-    }
+    };
     console.log(urlImagen);
     //si es que se subio, modifico la propiedad foto en la copia
-    if(urlImagen !== ""){
+    if (urlImagen !== "") {
       nuevoProducto.foto = urlImagen;
     }
     //creo el producto con la URL de la imagen súbida a firebase
     const resultado = await crearProducto(nuevoProducto);
-    loading.close()
-    
+    loading.close();
+
     // alert("Producto Creado!")
     // En este caso no me interesa capturar el resultado de Swal.fire porque solamente tenemos un botón (OK)
     await Swal.fire({
-      title:"Producto Creado",
-      text:`${values.nombre} se creo exitosamente`,
-      icon:"success"
-    })
+      title: "Producto Creado",
+      text: `${values.nombre} se creo exitosamente`,
+      icon: "success",
+    });
     // navegacion
-    navigate('/');
-  }
+    navigate("/");
+  };
 
   return (
-    <div className="container pt-4">
-      <h1 className="mb-4">Crear Producto</h1>
-      <form onSubmit={handleSubmit}>
-        {/* nombre */}
-        <div className="mb-3">
-          <label className="form-label" htmlFor="nombre">
-            Nombre
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="nombre"
-            placeholder="Ej. Vestido Azul"
-            name="nombre"
-            value={values.nombre}
-            // onChange={(ev) => setValues({nombre:ev.target.value})}
-            onChange={handleValues}
-          />
-        </div>
-        {/* descripción */}
-        <div className="mb-3">
-          <label className="form-label" htmlFor="descripcion">
-            Descripción
-          </label>
-          <textarea
-            className="form-control"
-            id="descripcion"
-            name="descripcion"
-            value={values.descripcion}
-            onChange={handleValues}
-          ></textarea>
-          {/* precio */}
-          <div className="mb-3">
-            <label className="form-label" htmlFor="precio">
-              Precio
-            </label>
-            <input
-              type="number"
-              className="form-control"
-              id="precio"
-              placeholder="100"
-              name="precio"
-              value={values.precio}
-              onChange={handleValues}
-            />
-          </div>
-          {/* color */}
-          <div className="mb-3">
-            <label className="form-label" htmlFor="color">
-              Color
-            </label>
-            <input
-              type="color"
-              className="form-control"
-              id="color"
-              name="color"
-              value={values.color}
-              onChange={handleValues}
-            />
-          </div>
-          {/* categoria */}
-          <div className="mb-3">
-            <label className="form-label" htmlFor="categoria">
-              Categoría
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="categoria"
-              placeholder="Jeans"
-              name="categoria"
-              value={values.categoria}
-              onChange={handleValues}
-            />
-          </div>
-          {/* {fecha} */}
-          <div className="mb-3">
-            <label className="form-label" htmlFor="fecha">
-              Fecha
-            </label>
-            <input
-              type="date"
-              className="form-control"
-              id="fecha"
-              name="fecha"
-              value={values.fecha}
-              onChange={handleValues}
-            />
-          </div>
-        </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="imagen">
-            Foto
-          </label>
-          <input 
-            type="file"
-            className="form-control"
-            onChange={handleImage}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary btn-lg">
-          Crear
-        </button>
-      </form>
-    </div>
+    <FormProduct
+      handleValues={handleValues}
+      handleImage={handleImage}
+      handleSubmit={handleSubmit}
+      values={values}
+      title="Crear Producto"
+    />
   );
 };
 

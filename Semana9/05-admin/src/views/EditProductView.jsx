@@ -21,12 +21,12 @@ const EditProductView = () => {
     const getProduct = async () => {
       try {
         const resultado = await obtenerProductoPorId(id);
-        console.log(resultado)
+        setValues(resultado)
       } catch (error) {
         console.log(error)
       }
     }
-    getProduct()
+    getProduct();
   }, []);
 
   return (
