@@ -1,4 +1,4 @@
-import { ref, uploadBytes } from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { storage } from "../config/Firebase";
 import { nameFileUUID } from "../utils/utils";
 
@@ -10,7 +10,9 @@ const uploadFile = async (imagen) => {
     const refArchivo = ref(storage, nameWithExt);
 
     const resultado = await uploadBytes(refArchivo, imagen);
-    console.log("Resultado: ", resultado)
+    const urlArchivo = await getDownloadURL(refArchivo);
+    
+    return urlArchivo;
   } catch (error) {
     console.log(error)
   }
@@ -18,4 +20,4 @@ const uploadFile = async (imagen) => {
 
 export {
   uploadFile
-}
+} 

@@ -44,12 +44,21 @@ const CreateProductView = () => {
   const handleSubmit = async (ev) => {
     // prevenir la acción por defecto
     ev.preventDefault();
-    const nuevaImagen = await uploadFile(imagen);
-    console.log(nuevaImagen);
-    /*
-    const resultado = await crearProducto(values);
+    //subimos la imagen
+    const urlImagen = await uploadFile(imagen);
+    console.log(urlImagen);
+    //hacemos una copia del producto, con la info a partir del formulario
+    let nuevoProducto = {
+      ...values,
+    }
+    console.log(urlImagen);
+    //si es que se subio, modifico la propiedad foto en la copia
+    if(urlImagen !== ""){
+      nuevoProducto.foto = urlImagen;
+    }
+    //creo el producto con la URL de la imagen súbida a firebase
+    const resultado = await crearProducto(nuevoProducto);
     console.log(resultado);
-    */
     
     // alert("Producto Creado!")
     // En este caso no me interesa capturar el resultado de Swal.fire porque solamente tenemos un botón (OK)
