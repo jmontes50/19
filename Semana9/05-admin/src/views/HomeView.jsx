@@ -12,7 +12,7 @@ const HomeView = () => {
   }
 
   const handleEliminar = async (id) => {
-    console.log("handleEliminar", id);
+    // console.log("handleEliminar", id);
     const resultadoUsuario = await Swal.fire({
       title:'Desea eliminar el producto?',
       text:'Esta acción es irreversible 🙀!',
