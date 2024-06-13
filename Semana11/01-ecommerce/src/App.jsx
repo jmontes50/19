@@ -1,6 +1,13 @@
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import AllProductView from "./views/AllProductView";
+
 const App = () => {
   return (
-    <div>App</div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<AllProductView />} />
+      </Routes>
+    </Router>
   )
 }
 
