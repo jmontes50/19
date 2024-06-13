@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 import TableProducts from '../components/TableProducts';
-import { obtenerProductos } from '../services/productService';
+import { obtenerProductos, eliminarProducto } from '../services/productService';
 
 const HomeView = () => {
   const [productos, setProductos] = useState([]);
+
+  const handleEliminar = (id) => {
+    console.log("handleEliminar", id)
+  }
 
   //la función como argumento en useEffect no puede ser async
   useEffect(() => {
@@ -22,7 +26,7 @@ const HomeView = () => {
   return (
   <div className='container py-3'>
       <h1 className='mb-4'>Productos</h1>
-      <TableProducts productos={productos}/>
+      <TableProducts productos={productos} handleEliminar={handleEliminar} />
     </div>  
   )
 }
