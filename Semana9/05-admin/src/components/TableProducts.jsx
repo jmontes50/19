@@ -1,5 +1,6 @@
 import { convertDateToLocal } from "../utils/utils";
 import CircleColor from "./CircleColor";
+import { Link } from "react-router-dom";
 
 const TableProducts = ({ productos }) => {
   return (
@@ -28,9 +29,9 @@ const TableProducts = ({ productos }) => {
                 <td>{convertDateToLocal(fecha)}</td>
                 <td>S/ {precio}</td>
                 <td>
-                  <button className="btn btn-primary btn-sm">
+                  <Link className="btn btn-primary btn-sm" to={`/editproduct/${id}`}>
                     <i className="fa-solid fa-pen-to-square"></i>
-                  </button>
+                  </Link>
                 </td>
               </tr>
             )
