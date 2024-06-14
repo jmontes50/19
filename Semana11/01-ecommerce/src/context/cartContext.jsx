@@ -2,14 +2,15 @@
 import { createContext, useState, useEffect } from "react";
 
 //muy similar a una instanciación para crear el contexto de React;
-const CartContext = createContext(props);
+const CartContext = createContext();
 
 //Proveedor
-const CartContextProvider = () => {
+const CartContextProvider = (props) => {
   const [cart, setCart] = useState([]);
 
   const addProductToCart = (product) => {
-    setCart(product);
+    const newCart = [...cart, product];
+    setCart(newCart);
   }
   // mediante value el contexto podrá proveer loq ue desee
   return <CartContext.Provider value={{cart, addProductToCart}}>

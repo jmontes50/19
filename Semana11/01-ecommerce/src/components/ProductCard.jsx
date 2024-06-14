@@ -1,4 +1,11 @@
+import { useContext } from "react"; //para poder acceder a un contexto
+import { CartContext } from "../context/cartContext"; //el contexto en si
+
 const ProductCard = ({ product }) => {
+  const { addProductToCart } = useContext(CartContext);
+  
+  console.log(addProductToCart);
+
   const { nombre, foto, descripcion, precio, id, categoria } = product;
 
   return (
@@ -19,11 +26,16 @@ const ProductCard = ({ product }) => {
             S/ {precio}
           </span>
           <div className="flex justify-end pt-2">
-            <button className="bg-blue-600 text-white hover:bg-blue-500 rounded-l-md px-2 py-1">
+            <button
+              className="bg-blue-600 text-white hover:bg-blue-500 rounded-l-md px-2 py-1"
+              onClick={() => {
+                addProductToCart(product);
+              }}
+            >
               <i className="fa-solid fa-cart-plus"></i>
             </button>
             <button className="bg-sky-800 text-white hover:bg-sky-700 rounded-r-md px-2 py-1">
-            <i className="fa-solid fa-eye"></i>
+              <i className="fa-solid fa-eye"></i>
             </button>
           </div>
         </div>
