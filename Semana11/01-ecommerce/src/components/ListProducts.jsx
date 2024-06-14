@@ -7,7 +7,7 @@ const ListProducts = ({ products }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {/* renderizado condicional */}
           {products ? (
-            products.map((prod) => <ProductCard key={prod.id} />)
+            products.map((prod) => <ProductCard key={prod.id} product={prod} />)
           ) : (
             <p>No se encontraron productos</p>
           )}
