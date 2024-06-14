@@ -2,8 +2,10 @@ import ListProducts from "../components/ListProducts";
 import useAxios from "../hooks/useAxios";
 
 const AllProductView = () => {
+  // entorno, las variables en VITE con React tienen que ser VITE_ y tenemos que usar import.meta.env.VARIABLE
+  const URL = import.meta.env.VITE_ENDPOINT_BASE;
 
-  const { data, error, loading } = useAxios('https://665a7d66003609eda45e0a13.mockapi.io/productos');
+  const { data, error, loading } = useAxios(`${URL}/productos`);
 
   console.log({ data, error, loading });
 
