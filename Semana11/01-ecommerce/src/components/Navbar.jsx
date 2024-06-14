@@ -39,8 +39,11 @@ const Navbar = () => {
               </div>
               {/* derecha */}
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div className="text-gray-400 hover:text-white">
+                <div className="text-gray-400 hover:text-white relative">
                   <i className="fa-solid fa-cart-shopping fa-2x"></i>
+                  <div className="bg-yellow-300 text-gray-700 rounded-full w-6 h-6 absolute -right-2 -top-2 text-center font-semibold">
+                    5
+                  </div>
                 </div>
               </div>
             </div>
