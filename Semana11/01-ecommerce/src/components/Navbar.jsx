@@ -4,7 +4,7 @@ import {
   Transition,
   DisclosureButton,
 } from "@headlessui/react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -29,10 +29,18 @@ const Navbar = () => {
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
                   {/* {links} */}
-                  <Link to="/" 
-                  className="text-gray-200 hover:bg-gray-700 hover:text-white, rounded-md px-3 py-2 text-sm font-semibold">
+                  <Link
+                    to="/"
+                    className="text-gray-200 hover:bg-gray-700 hover:text-white, rounded-md px-3 py-2 text-sm font-semibold"
+                  >
                     Home
                   </Link>
+                </div>
+              </div>
+              {/* derecha */}
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <div className="text-gray-400 hover:text-white">
+                  <i className="fa-solid fa-cart-shopping fa-2x"></i>
                 </div>
               </div>
             </div>
