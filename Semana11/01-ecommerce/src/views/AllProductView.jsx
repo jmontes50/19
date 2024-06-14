@@ -11,7 +11,7 @@ const AllProductView = () => {
 
   return (
     <div>
-      <ListProducts />
+      <ListProducts products={data} />
     </div>
   );
 };
