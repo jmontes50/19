@@ -16,6 +16,10 @@ const CartContextProvider = (props) => {
       product.cantidad = 1;
       const newCart = [...cart, product];
       setCart(newCart);
+    }else{ //si es que ya existe
+      const copyCart = [...cart];
+      copyCart[existsIndex].cantidad++; //indico la posicion en la copia del carrito[] y le aumento +1
+      setCart(copyCart);
     }
 
     
