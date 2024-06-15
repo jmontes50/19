@@ -22,10 +22,12 @@ const CartContextProvider = (props) => {
       setCart(copyCart);
     }
 
-    
   }
+
+  const quantityTotal = cart.reduce((acumulator, prod) => acumulator + prod.cantidad, 0);
+    // console.log("quantityTotal", quantityTotal)
   // mediante value el contexto podrá proveer loq ue desee
-  return <CartContext.Provider value={{cart, addProductToCart}}>
+  return <CartContext.Provider value={{cart, addProductToCart, quantityTotal}}>
     {props.children}
   </CartContext.Provider>
 }

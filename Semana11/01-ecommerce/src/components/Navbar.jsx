@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { CartContext } from "../context/cartContext";
 import {
   Disclosure,
   Menu,
@@ -7,6 +9,9 @@ import {
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
+  const { quantityTotal } = useContext(CartContext);
+
   return (
     <Disclosure as="nav" className="bg-sky-800">
       {({ open }) => (
@@ -43,7 +48,7 @@ const Navbar = () => {
                   <i className="fa-solid fa-cart-shopping fa-2x"></i>
                   {/* Badge */}
                   <div className="bg-yellow-300 text-gray-700 rounded-full w-6 h-6 absolute -right-2 -top-2 text-center font-semibold">
-                    5
+                    { quantityTotal }
                   </div>
                 </div>
               </div>
