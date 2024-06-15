@@ -1,5 +1,6 @@
 //Componer de su propio contexto y un proveedor
 import { createContext, useState, useEffect } from "react";
+import { getStorage, saveStorage } from "../utils/localStorage";
 
 //muy similar a una instanciación para crear el contexto de React;
 const CartContext = createContext();
@@ -26,6 +27,12 @@ const CartContextProvider = (props) => {
   const quantityTotal = cart.reduce((acumulator, prod) => acumulator + prod.cantidad, 0);
     // console.log("quantityTotal", quantityTotal)
   // mediante value el contexto podrá proveer loq ue desee
+
+  //useEffect deberia ser lo último antes del componente
+  useEffect(() => {
+    saveStorage('cart', cart);
+  }, [cart]);
+
   return <CartContext.Provider value={{cart, addProductToCart, quantityTotal}}>
     {props.children}
   </CartContext.Provider>
