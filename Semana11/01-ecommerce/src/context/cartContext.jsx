@@ -28,9 +28,19 @@ const CartContextProvider = (props) => {
     // console.log("quantityTotal", quantityTotal)
   // mediante value el contexto podrá proveer loq ue desee
 
+  useEffect(() => {
+    const dataStorage = getStorage('cart');
+    console.log({ dataStorage });
+    if(dataStorage){
+      setCart(dataStorage);
+    }
+  },[])
+
   //useEffect deberia ser lo último antes del componente
   useEffect(() => {
-    saveStorage('cart', cart);
+    if(cart.length > 0){
+      saveStorage('cart', cart);
+    }
   }, [cart]);
 
   return <CartContext.Provider value={{cart, addProductToCart, quantityTotal}}>
