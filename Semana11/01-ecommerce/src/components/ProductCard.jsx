@@ -1,9 +1,10 @@
 import { useContext } from "react"; //para poder acceder a un contexto
 import { CartContext } from "../context/cartContext"; //el contexto en si
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const { addProductToCart } = useContext(CartContext);
-  
+
   // console.log(addProductToCart);
 
   const { nombre, foto, descripcion, precio, id, categoria } = product;
@@ -34,9 +35,12 @@ const ProductCard = ({ product }) => {
             >
               <i className="fa-solid fa-cart-plus"></i>
             </button>
-            <button className="bg-sky-800 text-white hover:bg-sky-700 rounded-r-md px-2 py-1">
+            <Link
+              className="bg-sky-800 text-white hover:bg-sky-700 rounded-r-md px-2 py-1"
+              to={`/product/${id}`}
+            >
               <i className="fa-solid fa-eye"></i>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
