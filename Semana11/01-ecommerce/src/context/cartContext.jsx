@@ -9,8 +9,16 @@ const CartContextProvider = (props) => {
   const [cart, setCart] = useState([]);
 
   const addProductToCart = (product) => {
-    const newCart = [...cart, product];
-    setCart(newCart);
+    const existsIndex = cart.findIndex((prod) => prod.id === product.id);
+    // console.log("existsIndex: ", existsIndex);
+    //comprobar si es que no existe
+    if(existsIndex === -1){
+      product.cantidad = 1;
+      const newCart = [...cart, product];
+      setCart(newCart);
+    }
+
+    
   }
   // mediante value el contexto podrá proveer loq ue desee
   return <CartContext.Provider value={{cart, addProductToCart}}>
