@@ -21,7 +21,6 @@ const CartContextProvider = (props) => {
       copyCart[existsIndex].cantidad++; //indico la posicion en la copia del carrito[] y le aumento +1
       setCart(copyCart);
     }
-
   }
 
   const quantityTotal = cart.reduce((acumulator, prod) => acumulator + prod.cantidad, 0);
