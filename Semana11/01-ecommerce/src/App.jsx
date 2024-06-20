@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthContextProvider } from "./context/authContext";
 import { CartContextProvider } from "./context/cartContext";
 import Navbar from "./components/Navbar";
+import ProtectedRoute from "./components/ProtectedRoute";
 import AllProductView from "./views/AllProductView";
 import ProductDetailView from "./views/ProductDetailView";
 import LoginView from "./views/LoginView";
@@ -20,7 +21,14 @@ const App = () => {
             <Route path="/" element={<AllProductView />} />
             <Route path="/product/:id" element={<ProductDetailView />} />
             <Route path="/login" element={<LoginView />} />
-            <Route path="/cart" element={<CartView />} />
+            <Route
+              path="/cart"
+              element={
+                <ProtectedRoute>
+                  <CartView />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </CartContextProvider>
       </AuthContextProvider>
