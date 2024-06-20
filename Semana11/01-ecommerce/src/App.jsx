@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import AllProductView from "./views/AllProductView";
 import ProductDetailView from "./views/ProductDetailView";
 import LoginView from "./views/LoginView";
+import CartView from "./views/CartView";
 
 // import Counter from "./components/Counter";
 
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/" element={<AllProductView />} />
             <Route path="/product/:id" element={<ProductDetailView />} />
             <Route path="/login" element={<LoginView />} />
+            <Route path="/cart" element={<CartView />} />
           </Routes>
         </CartContextProvider>
       </AuthContextProvider>
