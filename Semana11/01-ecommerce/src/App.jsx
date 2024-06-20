@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AuthContextProvider } from "./context/authContext";
 import { CartContextProvider } from "./context/cartContext";
 import Navbar from "./components/Navbar";
 import AllProductView from "./views/AllProductView";
@@ -10,17 +11,19 @@ import LoginView from "./views/LoginView";
 const App = () => {
   return (
     <Router>
-      <CartContextProvider>
-        {/* <Counter /> */}
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<AllProductView />} />
-          <Route path="/product/:id" element={<ProductDetailView />} />
-          <Route path="/login" element={<LoginView />} />
-        </Routes>
-      </CartContextProvider>
+      <AuthContextProvider>
+        <CartContextProvider>
+          {/* <Counter /> */}
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<AllProductView />} />
+            <Route path="/product/:id" element={<ProductDetailView />} />
+            <Route path="/login" element={<LoginView />} />
+          </Routes>
+        </CartContextProvider>
+      </AuthContextProvider>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;
