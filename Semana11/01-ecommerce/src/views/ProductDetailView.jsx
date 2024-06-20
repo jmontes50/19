@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import useAxios from "../hooks/useAxios";
+import CircleColor from "../components/CircleColor";
 
 const ProductDetailView = () => {
   const { id } = useParams();
@@ -61,7 +62,9 @@ const ProductDetailView = () => {
               </div>
               <div className="flex border-t border-b mb-6 border-gray-200 py-2">
                 <span className="text-gray-500">Color</span>
-                <span className="ml-auto text-gray-900">{ color }</span>
+                <span className="ml-auto text-gray-900">
+                  <CircleColor color={color} />
+                </span>
               </div>
               {/*  */}
               <div className="flex">
