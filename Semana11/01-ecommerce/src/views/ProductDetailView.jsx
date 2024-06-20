@@ -1,16 +1,38 @@
+import { useParams } from "react-router-dom";
+import useAxios from "../hooks/useAxios";
+
 const ProductDetailView = () => {
+  const { id } = useParams();
+
+  const URL = import.meta.env.VITE_ENDPOINT_BASE;
+  //product/:id
+  //GET
+  //No tengo que enviar cuerpo en la petición
+  const { data, error, loading } = useAxios(`${URL}/productos/${id}`);
+  console.log({data});
+
+  if(loading || data === null){
+    return <p>Cargando contenido...</p>
+  }
+
+  if(error){
+    return <p>Hubo un error, vuelva a actualizar en unos minutos</p>
+  }
+
+  const { marca, nombre, precio, categoria, foto, descripcion, opiniones, fecha, color } = data;
+
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
-          {/* contenido izq */}
+            {/* contenido izq */}
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
-                BRAND NAME
+                { marca }
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">
-                Animated Night Hill Illustrations
+                { nombre }
               </h1>
               {/* pestañas */}
               <div className="flex mb-4">
@@ -26,29 +48,25 @@ const ProductDetailView = () => {
               </div>
               {/* descripcion */}
               <p className="leading-relaxed mb-4">
-                Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-                sriracha taximy chia microdosing tilde DIY. XOXO fam inxigo
-                juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-                seitan poutine tumeric. Gastropub blue bottle austin listicle
-                pour-over, neutra jean.
+                { descripcion }
               </p>
               {/* especificaciones */}
               <div className="flex border-t border-gray-200 py-2">
-                <span className="text-gray-500">Color</span>
-                <span className="ml-auto text-gray-900">Blue</span>
+                <span className="text-gray-500">Categoria</span>
+                <span className="ml-auto text-gray-900">{ categoria }</span>
               </div>
               <div className="flex border-t border-gray-200 py-2">
-                <span className="text-gray-500">Size</span>
-                <span className="ml-auto text-gray-900">Medium</span>
+                <span className="text-gray-500">Fecha</span>
+                <span className="ml-auto text-gray-900">{ fecha }</span>
               </div>
               <div className="flex border-t border-b mb-6 border-gray-200 py-2">
-                <span className="text-gray-500">Quantity</span>
-                <span className="ml-auto text-gray-900">4</span>
+                <span className="text-gray-500">Color</span>
+                <span className="ml-auto text-gray-900">{ color }</span>
               </div>
               {/*  */}
               <div className="flex">
                 <span className="title-font font-medium text-2xl text-gray-900">
-                  $58.00
+                  { precio }
                 </span>
                 <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                   Button
@@ -72,7 +90,7 @@ const ProductDetailView = () => {
             <img
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://dummyimage.com/400x400"
+              src={ foto }
             />
           </div>
         </div>
