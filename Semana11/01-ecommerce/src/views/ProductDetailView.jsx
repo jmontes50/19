@@ -97,6 +97,21 @@ const ProductDetailView = () => {
               src={ foto }
             />
           </div>
+          {/* reseñas */}
+          <div className="container px-5 py-24 mx-auto">
+            <div className="lg:w-4/5 mx-auto">
+            <h2 className="text-xl mb-5">Reseñas</h2>
+            <textarea className="border-3 rounded w-full mb-3 outline p-3" placeholder="Deja tu opinión aquí...">
+            </textarea>
+              {opiniones.length > 0 ? opiniones.map((opinion, i) => (
+                <div className="w-full p-3 border-2 rounded mb-4" key={i}>
+                  { opinion }
+                </div>
+              )) : <p className="w-full p-3 mb-4">
+                No se encontraron reseñas, deja tu la primera!
+                </p>}
+            </div>
+          </div>
         </div>
       </section>
     </>
