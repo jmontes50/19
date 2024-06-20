@@ -9,7 +9,7 @@ const LoginView = () => {
   const handleLogin = async () => {
     try {
       const result = await LoginWithGoogle();
-      console.log("handleLogin ", result);
+      // console.log("handleLogin ", result);
     } catch (error) {
       console.log(error);
     }
