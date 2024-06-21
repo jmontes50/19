@@ -65,18 +65,24 @@ const Navbar = () => {
               {/* derecha */}
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* user es null o un objeto */}
-                {user ? (
-                  <Link
-                    to="/cart"
-                    className="text-gray-400 hover:text-white relative"
-                  >
-                    <i className="fa-solid fa-cart-shopping fa-2x"></i>
-                    {/* Badge */}
-                    <div className="bg-yellow-300 text-gray-700 rounded-full w-6 h-6 absolute -right-2 -top-2 text-center font-semibold">
-                      {quantityTotal}
-                    </div>
-                  </Link>
-                ) : null}
+                {user.photoURL ? (
+                  <img
+                    src={user.photoURL}
+                    className="rounded-full w-6 h-6 inline-block me-2"
+                  />
+                ) : (
+                  <img
+                    src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1718841600&semt=ais_user"
+                    className="rounded-full w-6 h-6 inline-block me-2"
+                  />
+                )}
+                {user.displayName ? (
+                  <span className="font-bold text-white">
+                    {user.displayName}
+                  </span>
+                ) : (
+                  <span className="font-bold text-white">{user.email}</span>
+                )}
               </div>
             </div>
           </div>
