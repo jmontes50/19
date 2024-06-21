@@ -38,7 +38,7 @@ const FormUser = ({ handleLoginEmail, handleRegisterEmail }) => {
         {/* login */}
         <TabPanel>
           <div className="min-w-96 p-3 mb-4 block">
-            <div>
+            <div className="mb-2">
               <label className="text-sm font-semibold mb-1 block">Email</label>
               <input className="border-2 p-1 h-12 w-full"  placeholder="Email Login" ref={inputEmailLogIn}/>
             </div>
@@ -56,7 +56,7 @@ const FormUser = ({ handleLoginEmail, handleRegisterEmail }) => {
         {/* register */}
         <TabPanel>
           <div className="min-w-96 p-3 mb-4 block">
-            <div>
+            <div className="mb-2">
               <label className="text-sm font-semibold mb-1 block">Email</label>
               <input className="border-2 p-1 h-12 w-full"  placeholder="Email Register" ref={inputEmailRegister} />
             </div>
