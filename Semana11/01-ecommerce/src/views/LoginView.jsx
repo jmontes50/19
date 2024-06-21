@@ -3,12 +3,15 @@ import { AuthContext } from "../context/authContext";
 import FormUser from "../components/FormUser";
 import { registerWithEmail, loginWithEmail } from "../functions/authFunctions";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const LoginView = () => {
 
   const { LoginWithGoogle } = useContext(AuthContext);
   // console.log(LoginWithGoogle)
   const navigate = useNavigate();
+
+  const notify = (name) => toast(`Bienvenid@ ${name}`);
 
   const handleLogin = async () => {
     try {
@@ -21,8 +24,10 @@ const LoginView = () => {
 
   const handleLoginEmail = async (email, password) => {
     try {
-      await loginWithEmail(email, password);
-      navigate('/');
+      const result = await loginWithEmail(email, password);
+      // console.log("handleLoginEmail", result)
+      notify(result.user.email);
+      // navigate('/');
     } catch (error) {
       console.log(error);
     }
