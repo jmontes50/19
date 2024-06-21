@@ -12,7 +12,7 @@ const LoginView = () => {
   // console.log(LoginWithGoogle)
   const navigate = useNavigate();
 
-  const notify = (name, callback = {}) => toast(`Bienvenid@ ${name}`, callback);
+  const notify = (msg, callback = {}) => toast(msg, callback);
 
   const handleLogin = async () => {
     try {
@@ -27,10 +27,11 @@ const LoginView = () => {
     try {
       const result = await loginWithEmail(email, password);
       console.log("handleLoginEmail", result)
-      notify(result.user.email, { onClose: () => navigate('/') });
+      notify(`Bienvenid@ ${result.user.email}`, { onClose: () => navigate('/') });
     } catch (error) {
       // console.log(error.code);
-      console.log(firebaseErrorsInSpanish[error.code]);
+      // console.log(firebaseErrorsInSpanish[error.code]);
+      notify(firebaseErrorsInSpanish[error.code], {type: "error"});
     }
   }
 
