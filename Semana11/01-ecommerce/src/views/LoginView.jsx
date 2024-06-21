@@ -4,6 +4,7 @@ import FormUser from "../components/FormUser";
 import { registerWithEmail, loginWithEmail } from "../functions/authFunctions";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import firebaseErrorsInSpanish from "../utils/firebaseErrorMessages";
 
 const LoginView = () => {
 
@@ -25,10 +26,11 @@ const LoginView = () => {
   const handleLoginEmail = async (email, password) => {
     try {
       const result = await loginWithEmail(email, password);
-      // console.log("handleLoginEmail", result)
+      console.log("handleLoginEmail", result)
       notify(result.user.email, { onClose: () => navigate('/') });
     } catch (error) {
-      console.log(error);
+      // console.log(error.code);
+      console.log(firebaseErrorsInSpanish[error.code]);
     }
   }
 
