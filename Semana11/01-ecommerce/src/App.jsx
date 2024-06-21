@@ -7,6 +7,7 @@ import AllProductView from "./views/AllProductView";
 import ProductDetailView from "./views/ProductDetailView";
 import LoginView from "./views/LoginView";
 import CartView from "./views/CartView";
+import { ToastContainer } from "react-toastify";
 
 // import Counter from "./components/Counter";
 
@@ -30,6 +31,7 @@ const App = () => {
               }
             />
           </Routes>
+          <ToastContainer />
         </CartContextProvider>
       </AuthContextProvider>
     </Router>
