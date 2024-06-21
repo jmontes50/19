@@ -26,7 +26,7 @@ const LoginView = () => {
 
   return (
     <div className="container min-h-96 flex justify-center items-center flex-col">
-      <FormUser />
+      <FormUser handleLoginEmail={ handleLoginEmail } handleRegisterEmail={ handleRegisterEmail } />
       <button className="px-5 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center text-lg w-96" onClick={handleLogin}>
         <i className="fa-brands fa-google me-3 fa-2x"></i>Ingresa con Google
       </button>
