@@ -26,6 +26,9 @@ const FormUser = () => {
               </label>
               <input className="border-2 p-1 h-12 w-full"/>
             </div>
+            <button className="bg-sky-700 w-full h-16 p-3 text-center text-white font-semibold mb-3 hover:bg-sky-800">
+              Ingresa
+            </button>
           </div>
         </TabPanel>
         <TabPanel>
@@ -40,6 +43,9 @@ const FormUser = () => {
               </label>
               <input className="border-2 p-1 h-12 w-full" />
             </div>
+            <button className="bg-sky-700 w-full h-16 p-3 text-center text-white font-semibold mb-3 hover:bg-sky-800">
+              Registrate
+            </button>
           </div>
         </TabPanel>
       </TabPanels>
