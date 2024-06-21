@@ -16,6 +16,14 @@ const LoginView = () => {
     }
   }
 
+  const handleLoginEmail = (email, password) => {
+    console.log("handleLoginEmail", email, password)
+  }
+
+  const handleRegisterEmail = (email, password) => {
+    console.log("handleRegisterEmail", email, password)
+  }
+
   return (
     <div className="container min-h-96 flex justify-center items-center flex-col">
       <FormUser />

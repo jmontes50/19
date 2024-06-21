@@ -55,7 +55,7 @@ const FormUser = () => {
               <label className="text-sm font-semibold mb-1 block">
                 Contraseña
               </label>
-              <input className="border-2 p-1 h-12 w-full" type="password" ref={inputPassRegister}/>
+              <input className="border-2 p-1 h-12 w-full" type="password" ref={inputPassRegister} />
             </div>
             <button className="bg-sky-700 w-full h-16 p-3 text-center text-white font-semibold mb-3 hover:bg-sky-800">
               Registrate
