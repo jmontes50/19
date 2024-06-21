@@ -11,7 +11,7 @@ const LoginView = () => {
   // console.log(LoginWithGoogle)
   const navigate = useNavigate();
 
-  const notify = (name) => toast(`Bienvenid@ ${name}`);
+  const notify = (name, callback = {}) => toast(`Bienvenid@ ${name}`, callback);
 
   const handleLogin = async () => {
     try {
@@ -26,8 +26,7 @@ const LoginView = () => {
     try {
       const result = await loginWithEmail(email, password);
       // console.log("handleLoginEmail", result)
-      notify(result.user.email);
-      // navigate('/');
+      notify(result.user.email, { onClose: () => navigate('/') });
     } catch (error) {
       console.log(error);
     }
