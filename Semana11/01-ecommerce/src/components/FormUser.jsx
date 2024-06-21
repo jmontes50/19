@@ -1,13 +1,15 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 
 const FormUser = () => {
+  const styleTab = "py-1 px-3 font-semibold text-black data-[selected]:border-blue-500 data-[selected]:border-b-4 data-[hover]:border-blue-500 data-[focus]:border-b-4";
+
   return (
     <TabGroup>
       <TabList className="flex gap-4">
-        <Tab className="rounded-full py-1 px-3 text-sm/6 font-semibold text-black focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white">
+        <Tab className={styleTab}>
           Ingresa
         </Tab>
-        <Tab className="rounded-full py-1 px-3 text-sm/6 font-semibold text-black focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white">
+        <Tab className={styleTab}>
           Registrate
         </Tab>
       </TabList>
