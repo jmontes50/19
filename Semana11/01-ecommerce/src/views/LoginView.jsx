@@ -1,11 +1,14 @@
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import FormUser from "../components/FormUser";
+import { registerWithEmail, loginWithEmail } from "../functions/authFunctions";
+import { useNavigate } from "react-router-dom";
 
 const LoginView = () => {
 
   const { LoginWithGoogle } = useContext(AuthContext);
   // console.log(LoginWithGoogle)
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
@@ -16,12 +19,22 @@ const LoginView = () => {
     }
   }
 
-  const handleLoginEmail = (email, password) => {
-    console.log("handleLoginEmail", email, password)
+  const handleLoginEmail = async (email, password) => {
+    try {
+      await loginWithEmail(email, password);
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  const handleRegisterEmail = (email, password) => {
-    console.log("handleRegisterEmail", email, password)
+  const handleRegisterEmail = async (email, password) => {
+    try {
+      await registerWithEmail(email, password);
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
