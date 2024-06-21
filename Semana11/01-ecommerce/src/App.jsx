@@ -8,6 +8,9 @@ import ProductDetailView from "./views/ProductDetailView";
 import LoginView from "./views/LoginView";
 import CartView from "./views/CartView";
 import { ToastContainer } from "react-toastify";
+import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // import Counter from "./components/Counter";
 
