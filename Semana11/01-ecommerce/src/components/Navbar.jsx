@@ -49,6 +49,17 @@ const Navbar = () => {
                   >
                     Login
                   </Link>
+                  {user ? (
+                    <Link
+                      to="/cart"
+                      className="text-gray-200 hover:bg-gray-700 hover:text-white, rounded-md px-3 py-2 text-sm font-semibold relative"
+                    >
+                      <i className="fa-solid fa-cart-shopping me-2"></i>Carrito
+                      <div className="bg-yellow-300 text-gray-700 rounded-full w-6 h-6 absolute -right-2 -top-2 text-center font-semibold">
+                        {quantityTotal}
+                      </div>
+                    </Link>
+                  ) : null}
                 </div>
               </div>
               {/* derecha */}
