@@ -24,7 +24,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await closeSession();
-      notify("Cerro sesión correctamente", { type:"success" })
+      notify("Cerro sesión correctamente", { type:"success" });
     } catch (error) {
       // console.log(error);
       notify(firebaseErrorsInSpanish[error.code], { type: "error" });
