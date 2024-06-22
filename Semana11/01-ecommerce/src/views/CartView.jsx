@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/cartContext";
 import CartTable from "../components/CartTable";
 import { useForm } from "react-hook-form";
+import Map from "../components/Map";
 
 const CartView = () => {
   const { cart } = useContext(CartContext);
@@ -63,6 +64,17 @@ const CartView = () => {
               {...register("direccion")}
             />
           </div>
+          <div className="mb-3">
+            <label className="text-sm font-semibold mb-1 text-gray-600 block">
+              DNI:
+            </label>
+            <input
+              className="p-2 h-10 w-full border-2 border-gray-300 rounded block"
+              {...register("dni")}
+            />
+          </div>
+          {/* mapa */}
+          <Map />
           <button className="px-4 py-3 bg-sky-600 text-white font-semibold rounded" type="submit">
             Confirmar Compra
           </button>
