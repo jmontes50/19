@@ -47,7 +47,20 @@ const CartView = () => {
             </label>
             <input
               className="p-2 h-10 w-full border-2 border-gray-300 rounded block"
-              {...register("telefono")}
+              {...register("telefono", { required:true, minLength:6 })}
+            />
+            {errors.telefono?.type === "minLength" && 
+            <p className="text-sm text-red-500 font-semibold my-2">
+              Este campo necesita al menos 6 caracteres
+            </p>}
+          </div>
+          <div className="mb-3">
+            <label className="text-sm font-semibold mb-1 text-gray-600 block">
+              Dirección:
+            </label>
+            <input
+              className="p-2 h-10 w-full border-2 border-gray-300 rounded block"
+              {...register("direccion")}
             />
           </div>
           <button className="px-4 py-3 bg-sky-600 text-white font-semibold rounded" type="submit">
