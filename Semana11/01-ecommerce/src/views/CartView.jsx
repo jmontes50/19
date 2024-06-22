@@ -28,11 +28,17 @@ const CartView = () => {
             </label>
             <input
               className="p-2 h-10 w-full border-2 border-gray-300 rounded block"
-              {...register("nombreCompleto", { required:true })}
+              // {...register("nombreARegistrar", { validaciones especificas })}
+              {...register("nombreCompleto", { required:true, minLength:6 })}
             />
-            {errors.nombreCompleto && 
+            {/* errors.nombreRegistrado?.type === validacionEspecifica && el JSX a mostrar si el error es válido*/}
+            {errors.nombreCompleto?.type === "required" && 
             <p className="text-sm text-red-500 font-semibold my-2">
               Este campo es requerido
+            </p>}
+            {errors.nombreCompleto?.type === "minLength" && 
+            <p className="text-sm text-red-500 font-semibold my-2">
+              Este campo necesita al menos 6 caracteres
             </p>}
           </div>
           <div className="mb-3">
