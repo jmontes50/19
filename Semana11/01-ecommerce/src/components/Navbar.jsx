@@ -5,6 +5,9 @@ import {
   Disclosure,
   Menu,
   Transition,
+  MenuButton,
+  MenuItem,
+  MenuItems,
   DisclosureButton,
 } from "@headlessui/react";
 import { Link } from "react-router-dom";
@@ -78,13 +81,26 @@ const Navbar = () => {
                   />
                 )}
                 {/* si yo no se si un objeto tiene determinada propiedad, puedo añadir ?. antes de la propiedad, si no existe me dara un undefined, el undefined es un valor falsy */}
-                {user?.displayName ? (
-                  <span className="font-bold text-white">
-                    {user.displayName}
-                  </span>
-                ) : (
-                  <span className="font-bold text-white">{user?.email}</span>
-                )}
+                <Menu>
+                  <MenuButton>
+                    {user?.displayName ? (
+                      <span className="font-bold text-white">
+                        {user.displayName}
+                      </span>
+                    ) : (
+                      <span className="font-bold text-white">
+                        {user?.email}
+                      </span>
+                    )}
+                  </MenuButton>
+                  <MenuItems anchor="bottom">
+                    <MenuItem>
+                      <div className="bg-sky-600 text-white px-5 py-4 rounded w-48 font-semibold">
+                        Cerrar sesión
+                      </div>
+                    </MenuItem>
+                  </MenuItems>
+                </Menu>
               </div>
             </div>
           </div>
