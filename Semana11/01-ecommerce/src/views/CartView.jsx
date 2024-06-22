@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 const CartView = () => {
   const { cart } = useContext(CartContext);
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: { errors }, } = useForm();
 
   const handleCheckout = (data) => {
     console.log(data);
@@ -28,8 +28,12 @@ const CartView = () => {
             </label>
             <input
               className="p-2 h-10 w-full border-2 border-gray-300 rounded block"
-              {...register("nombreCompleto")}
+              {...register("nombreCompleto", { required:true })}
             />
+            {errors.nombreCompleto && 
+            <p className="text-sm text-red-500 font-semibold my-2">
+              Este campo es requerido
+            </p>}
           </div>
           <div className="mb-3">
             <label className="text-sm font-semibold mb-1 text-gray-600 block">
