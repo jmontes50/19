@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 import firebaseErrorsInSpanish from "../utils/firebaseErrorMessages";
 
 const LoginView = () => {
-
   const { LoginWithGoogle } = useContext(AuthContext);
   // console.log(LoginWithGoogle)
   const navigate = useNavigate();
@@ -21,33 +20,45 @@ const LoginView = () => {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   const handleLoginEmail = async (email, password) => {
     try {
       const result = await loginWithEmail(email, password);
-      console.log("handleLoginEmail", result)
-      notify(`Bienvenid@ ${result.user.email}`, { onClose: () => navigate('/') });
+      console.log("handleLoginEmail", result);
+      notify(`Bienvenid@ ${result.user.email}`, {
+        onClose: () => navigate("/"),
+      });
     } catch (error) {
       // console.log(error.code);
       // console.log(firebaseErrorsInSpanish[error.code]);
-      notify(firebaseErrorsInSpanish[error.code], {type: "error"});
+      notify(firebaseErrorsInSpanish[error.code], { type: "error" });
     }
-  }
+  };
 
   const handleRegisterEmail = async (email, password) => {
     try {
-      await registerWithEmail(email, password);
-      navigate('/');
+      const result = await registerWithEmail(email, password);
+      // console.log(result);
+      notify(`Usuario registrado! ${result.user.email}`, {
+        type: "success",
+        onClose: () => navigate("/"),
+      });
     } catch (error) {
-      console.log(error);
+      notify(firebaseErrorsInSpanish[error.code], { type: "error" });
     }
-  }
+  };
 
   return (
     <div className="container min-h-96 flex justify-center items-center flex-col">
-      <FormUser handleLoginEmail={ handleLoginEmail } handleRegisterEmail={ handleRegisterEmail } />
-      <button className="px-5 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center text-lg w-96" onClick={handleLogin}>
+      <FormUser
+        handleLoginEmail={handleLoginEmail}
+        handleRegisterEmail={handleRegisterEmail}
+      />
+      <button
+        className="px-5 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center text-lg w-96"
+        onClick={handleLogin}
+      >
         <i className="fa-brands fa-google me-3 fa-2x"></i>Ingresa con Google
       </button>
     </div>
