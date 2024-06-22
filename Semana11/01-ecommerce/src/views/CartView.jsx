@@ -6,16 +6,29 @@ const CartView = () => {
   const { cart } = useContext(CartContext);
 
   return (
-
-      <div className="flex justify-between gap-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="lg:w-1/2 w-full">
+    <div className="flex justify-between gap-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="lg:w-1/2 w-full">
         <h2 className="mb-3 text-2xl font-bold p-2 mt-5">Resumen carrito</h2>
-          <CartTable products={cart} />
-        </div>
-        <div className="lg:w-1/2 w-full">
-        <h2 className="mb-3 text-2xl font-bold p-2 mt-5">Confirmar Compra</h2>
-        </div>
+        <CartTable products={cart} />
       </div>
+      <div className="lg:w-1/2 w-full">
+        <h2 className="mb-3 text-2xl font-bold p-2 mt-5">Confirmar Compra</h2>
+        <form>
+          <div className="mb-3">
+            <label className="text-sm font-semibold mb-1 text-gray-600 block">
+              Nombre completo:
+            </label>
+            <input className="p-2 h-10 w-full border-2 border-gray-300 rounded block" />
+          </div>
+          <div className="mb-3">
+            <label className="text-sm font-semibold mb-1 text-gray-600 block">
+              Teléfono:
+            </label>
+            <input className="p-2 h-10 w-full border-2 border-gray-300 rounded block" />
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 
