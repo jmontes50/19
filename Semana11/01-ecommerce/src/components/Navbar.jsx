@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../context/cartContext";
 import { AuthContext } from "../context/authContext";
+import { closeSession } from "../functions/authFunctions";
 import {
   Disclosure,
   Menu,
@@ -11,12 +12,24 @@ import {
   DisclosureButton,
 } from "@headlessui/react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import firebaseErrorsInSpanish from "../utils/firebaseErrorMessages";
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
   const { quantityTotal } = useContext(CartContext);
 
-  console.log(user);
+  const notify = (msg, callback = {}) => toast(msg, callback);
+
+  const handleLogout = async () => {
+    try {
+      await closeSession();
+      notify("Cerro sesión correctamente", { type:"success" })
+    } catch (error) {
+      // console.log(error);
+      notify(firebaseErrorsInSpanish[error.code], { type: "error" });
+    }
+  }
 
   return (
     <Disclosure as="nav" className="bg-sky-800">
@@ -95,9 +108,9 @@ const Navbar = () => {
                   </MenuButton>
                   <MenuItems anchor="bottom">
                     <MenuItem>
-                      <div className="bg-sky-600 text-white px-5 py-4 rounded w-48 font-semibold">
+                      <button className="bg-sky-600 text-white px-5 py-4 rounded w-48 font-semibold" onClick={handleLogout}>
                         Cerrar sesión
-                      </div>
+                      </button>
                     </MenuItem>
                   </MenuItems>
                 </Menu>
