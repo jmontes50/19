@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 
 // eslint-disable-next-line react/prop-types
-const Map = ({ height = "400px" }) => {
-  const [positionMarker, setPositionMarker] = useState(null);
+const Map = ({ height = "400px", positionMarker, setPositionMarker }) => {
+  // const [positionMarker, setPositionMarker] = useState(null);
   const [coordsMap, setCoordsMap] = useState([-12.0630198, -77.0384351]);
 
   const LocationMarker = ({ position, setPosition }) => {
