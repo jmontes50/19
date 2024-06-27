@@ -29,11 +29,21 @@ const AllProductView = () => {
     <div className="flex justify-between gap-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div className="lg:w-1/4 w-full">
         <h2 className="font-semibold text-lg mb-3">Filtros</h2>
-        <div>
+        <div className="mb-2">
+          <h3 className="font-semibold mb-2">Filtrar por Precio: </h3>
           <Slider
             value={prices}
             onChange={handleSlider}
+            min={1}
+            max={1000}
           />
+        </div>
+        <div className="mb-2">
+          <h3 className="font-semibold mb-2">Ordenar: </h3>
+          <select className="p-2 border-2 border-gray-400 rounded w-full">
+            <option value="asc">Ascendente</option>
+            <option value="des">Descendente</option>
+          </select>
         </div>
       </div>
       <div className="lg:w-3/4 w-full">
