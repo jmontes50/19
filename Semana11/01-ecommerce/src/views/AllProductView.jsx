@@ -13,6 +13,7 @@ const AllProductView = () => {
   // console.log({ data, error, loading });
 
   const [prices, setPrices] = useState([1, 1000]);
+  const [orderBy, setOrderBy] = useState("asc");
 
   const handleSlider = (event, newValues) => {
     console.log("handleSlider", newValues);
@@ -40,7 +41,11 @@ const AllProductView = () => {
         </div>
         <div className="mb-2">
           <h3 className="font-semibold mb-2">Ordenar: </h3>
-          <select className="p-2 border-2 border-gray-400 rounded w-full">
+          <select
+            className="p-2 border-2 border-gray-400 rounded w-full"
+            value={orderBy}
+            onChange={(e) => setOrderBy(e.target.value)}
+          >
             <option value="asc">Ascendente</option>
             <option value="des">Descendente</option>
           </select>
