@@ -3,16 +3,43 @@ import { CartContext } from "../context/cartContext";
 import CartTable from "../components/CartTable";
 import { useForm } from "react-hook-form";
 import Map from "../components/Map";
+import useAxios from "../hooks/useAxios";
 
 const CartView = () => {
+
+  const URL = import.meta.env.VITE_ENDPOINT_BASE;
+
   const { cart } = useContext(CartContext);
 
   const [positionMarker, setPositionMarker] = useState(null);
 
+  const [venta, setVenta] = useState(null)
+
+  const [startSubmit, setStartSubmit] = useState(false)
+
   const { register, handleSubmit, formState: { errors }, } = useForm();
 
-  const handleCheckout = (data) => {
-    console.log(data);
+  //añadimos el parametro false para que no se ejecute automaticamente
+  const { data, error, loading, fetchData } = useAxios(URL, { method: 'post', venta }, startSubmit)
+  console.log("Cart View", data)
+
+  const handleCheckout = (info) => {
+    const [latitud, longitud] = positionMarker;
+
+    const nuevaVenta = {
+      productos: cart,
+      fecha: Date.now(),
+      nombre_cliente: info.nombreCompleto,
+      telefono_cliente: info.telefono,
+      direccion_cliente: info.direccion,
+      dni_cliente: info.dni,
+      latitud: latitud,
+      longitud: longitud
+    }
+
+    setVenta(nuevaVenta);
+    setStartSubmit(true);
+    fetchData()
   }
 
   return (

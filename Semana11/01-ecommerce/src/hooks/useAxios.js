@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const useAxios = (url, options = { method:'get', data:null }) => {
+const useAxios = (url, options = { method: 'get', data: null }, autoFetch = true) => {
+  console.table({ url, options, autoFetch })
   const [data, setData] = useState(null); //para los datos
   const [error, setError] = useState(null); //para los errores
   const [loading, setLoading] = useState(false); //para saber si la petición esta en proceso
@@ -19,13 +20,16 @@ const useAxios = (url, options = { method:'get', data:null }) => {
   }
 
   useEffect(() => {
-    const startFetch = async () => {
-      fetchData()
+    //autoFetch va a indicar si vamos a ejecutar la solicitud de forma automatica
+    if (autoFetch) {
+      const startFetch = async () => {
+        fetchData()
+      }
+      startFetch();
     }
-    startFetch();
   }, [url, options.method, options.data])
 
-  return { data, error, loading }
+  return { data, error, loading, fetchData }
 }
 
 export default useAxios;
