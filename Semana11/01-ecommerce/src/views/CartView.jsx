@@ -4,11 +4,12 @@ import CartTable from "../components/CartTable";
 import { useForm } from "react-hook-form";
 import Map from "../components/Map";
 // import useAxios from "../hooks/useAxios";
-import usePost from "../hooks/usePost";
+// import usePost from "../hooks/usePost";
+import axiosPost from "../hooks/axiosService";
 
 const CartView = () => {
 
-  const URL = import.meta.env.VITE_ENDPOINT_BASE;
+  const URL = `${import.meta.env.VITE_ENDPOINT_BASE}/ventas`;
 
   const { cart } = useContext(CartContext);
 
@@ -21,10 +22,10 @@ const CartView = () => {
   const { register, handleSubmit, formState: { errors }, } = useForm();
 
   //añadimos el parametro false para que no se ejecute automaticamente
-  const { data, error, fetchData } = usePost(URL, { method: 'post', venta });
-  console.log("Cart View", data)
+  // const { data, error, fetchData } = usePost(URL, { method: 'post', venta });
+  // console.log("Cart View", data) 
 
-  const handleCheckout = (info) => {
+  const handleCheckout = async (info) => {
     const [latitud, longitud] = positionMarker;
 
     const nuevaVenta = {
@@ -38,16 +39,23 @@ const CartView = () => {
       longitud: longitud
     }
 
-    setVenta(nuevaVenta);
+    try {
+      const res = await axiosPost(URL, { method: 'POST', data: nuevaVenta });
+      console.log("CartView Venta", res)
+    } catch (error) {
+      console.log(error);
+    }
+
+    // setVenta(nuevaVenta);
     // setStartSubmit(true);
     // fetchData();
   }
 
-  useEffect(() => {
-    if (venta?.nombre_cliente) {
-      fetchData();
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (venta?.nombre_cliente) {
+  //     fetchData();
+  //   }
+  // }, [])
 
   return (
     <div className="flex justify-between gap-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
