@@ -9,19 +9,28 @@ const Carousel = () => {
   ];
 
   const [show, setShow] = useState(true);
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(2);
 
   return (
     // contenedor principal
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full overflow-hidden">
       {/* contenedor Transition e imagenes */}
       <div className="relative w-full h-auto">
         <img
           src={images[index]}
           alt={`Imagen ${index + 1}`}
-          className="w-full h-auto object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
+      {/* controles */}
+      <button
+        className="absolute left-0 top-1/2 -translate-y-1/2 bg-sky-600 text-white font-bold p-4 text-lg">
+        {"<"}
+      </button>
+      <button
+        className="absolute right-0 top-1/2 -translate-y-1/2 bg-sky-600 text-white font-bold p-4 text-lg">
+        {">"}
+      </button>
     </div>
   )
 }

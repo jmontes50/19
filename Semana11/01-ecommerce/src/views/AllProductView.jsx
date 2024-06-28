@@ -32,7 +32,7 @@ const AllProductView = () => {
     <>
       <div className="grid grid-cols-3 grid-rows-2 gap-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 max-h-96">
         <div className="col-span-2 row-span-2">
-
+          <Carousel />
         </div>
       </div>
       <div className="flex justify-between gap-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
