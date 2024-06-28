@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from "react-leaflet";
 
 // eslint-disable-next-line react/prop-types
 const Map = ({ height = "400px", positionMarker, setPositionMarker }) => {
@@ -20,6 +20,12 @@ const Map = ({ height = "400px", positionMarker, setPositionMarker }) => {
         map.flyTo(e.latlng, map.getZoom());
       }
     })
+
+    if (coordsMap) {
+      //deberia solucionar la obtención de una referencia al mapa actual
+      const _map = useMap();
+      _map.flyTo(coordsMap);
+    }
 
     return (
       <>
