@@ -1,9 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../context/cartContext";
 import CartTable from "../components/CartTable";
 import { useForm } from "react-hook-form";
 import Map from "../components/Map";
-import useAxios from "../hooks/useAxios";
+// import useAxios from "../hooks/useAxios";
+import usePost from "../hooks/usePost";
 
 const CartView = () => {
 
@@ -15,12 +16,12 @@ const CartView = () => {
 
   const [venta, setVenta] = useState(null)
 
-  const [startSubmit, setStartSubmit] = useState(false)
+  // const [startSubmit, setStartSubmit] = useState(false)
 
   const { register, handleSubmit, formState: { errors }, } = useForm();
 
   //añadimos el parametro false para que no se ejecute automaticamente
-  const { data, error, loading, fetchData } = useAxios(URL, { method: 'post', venta }, startSubmit)
+  const { data, error, fetchData } = usePost(URL, { method: 'post', venta });
   console.log("Cart View", data)
 
   const handleCheckout = (info) => {
@@ -38,9 +39,15 @@ const CartView = () => {
     }
 
     setVenta(nuevaVenta);
-    setStartSubmit(true);
-    fetchData()
+    // setStartSubmit(true);
+    // fetchData();
   }
+
+  useEffect(() => {
+    if (venta?.nombre_cliente) {
+      fetchData();
+    }
+  }, [])
 
   return (
     <div className="flex justify-between gap-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
