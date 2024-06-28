@@ -6,6 +6,16 @@ const filterByPrice = (products, prices) => {
   return productsFiltered;
 }
 
+const orderByName = (products, order) => {
+  const productsOrdered = products.toSorted((a, b) => {
+    //Una manera de indicar como vamos a ordenar un arr es usando valores nùmericos -1,1,0
+    //localeCompara, compara el texto y da valores position y negativos segùn considere
+    return a.nombre.localeCompare(b.nombre);
+  })
+  return productsOrdered;
+}
+
 export {
-  filterByPrice
+  filterByPrice,
+  orderByName
 }
