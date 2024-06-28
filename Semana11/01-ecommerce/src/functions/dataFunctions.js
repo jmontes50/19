@@ -11,6 +11,7 @@ const orderByName = (products, order) => {
     //Una manera de indicar como vamos a ordenar un arr es usando valores nùmericos -1,1,0
     //localeCompara, compara el texto y da valores position y negativos segùn considere
     return a.nombre.localeCompare(b.nombre);
+    // return a.precio - b.precio;
   })
   if (order === "des") {
     return productsOrdered.toReversed();
