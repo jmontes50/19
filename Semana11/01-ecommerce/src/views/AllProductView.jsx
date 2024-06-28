@@ -2,7 +2,7 @@ import { useState } from "react";
 import ListProducts from "../components/ListProducts";
 import useAxios from "../hooks/useAxios";
 import Slider from '@mui/material/Slider';
-import { filterByPrice } from "../functions/dataFunctions";
+import { filterByPrice, orderByName } from "../functions/dataFunctions";
 
 const AllProductView = () => {
   // entorno, las variables en VITE con React tienen que ser VITE_ y tenemos que usar import.meta.env.VARIABLE
@@ -24,6 +24,7 @@ const AllProductView = () => {
 
   if (data) {
     productsFiltered = filterByPrice(data, prices);
+    productsFiltered = orderByName(productsFiltered, orderBy);
   }
 
   return (

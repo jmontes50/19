@@ -12,6 +12,9 @@ const orderByName = (products, order) => {
     //localeCompara, compara el texto y da valores position y negativos segùn considere
     return a.nombre.localeCompare(b.nombre);
   })
+  if (order === "des") {
+    return productsOrdered.toReversed();
+  }
   return productsOrdered;
 }
 
