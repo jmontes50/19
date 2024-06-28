@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
+import clsx from 'clsx'
 
 const Carousel = () => {
   const images = [
@@ -12,24 +13,41 @@ const Carousel = () => {
   const [index, setIndex] = useState(0);
 
   const nextImage = () => {
-    setIndex((index + 1) % images.length);
+    setShow(false);
+    setTimeout(() => {
+      setIndex((index + 1) % images.length);
+      setShow(true);
+    }, 300)
   }
 
   const previousImage = () => {
-    setIndex((index - 1 + images.length) % images.length);
+    setShow(false);
+    setTimeout(() => {
+      setIndex((index - 1 + images.length) % images.length);
+      setShow(true);
+    }, 300)
   }
 
   return (
     // contenedor principal
     <div className="relative w-full h-full overflow-hidden">
       {/* contenedor Transition e imagenes */}
-      <div className="relative w-full h-auto">
-        <img
-          src={images[index]}
-          alt={`Imagen ${index + 1}`}
-          className="w-full h-full object-cover"
-        />
-      </div>
+      <Transition show={show}
+        enter="transition-opacity duration-300"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-300"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
+        <div className="relative w-full h-auto">
+          <img
+            src={images[index]}
+            alt={`Imagen ${index + 1}`}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </Transition>
       {/* controles */}
       <button
         onClick={previousImage}
