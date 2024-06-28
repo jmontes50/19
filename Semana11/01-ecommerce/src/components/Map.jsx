@@ -22,6 +22,7 @@ const Map = ({ height = "400px", positionMarker, setPositionMarker }) => {
     })
 
     if (coordsMap) {
+      console.log("coordsMap", coordsMap);
       //deberia solucionar la obtención de una referencia al mapa actual
       const _map = useMap();
       _map.flyTo(coordsMap);
