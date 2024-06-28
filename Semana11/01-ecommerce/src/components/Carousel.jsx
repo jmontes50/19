@@ -9,7 +9,15 @@ const Carousel = () => {
   ];
 
   const [show, setShow] = useState(true);
-  const [index, setIndex] = useState(2);
+  const [index, setIndex] = useState(0);
+
+  const nextImage = () => {
+    setIndex((index + 1) % images.length);
+  }
+
+  const previousImage = () => {
+    setIndex((index - 1 + images.length) % images.length);
+  }
 
   return (
     // contenedor principal
@@ -24,10 +32,12 @@ const Carousel = () => {
       </div>
       {/* controles */}
       <button
+        onClick={previousImage}
         className="absolute left-0 top-1/2 -translate-y-1/2 bg-sky-600 text-white font-bold p-4 text-lg">
         {"<"}
       </button>
       <button
+        onClick={nextImage}
         className="absolute right-0 top-1/2 -translate-y-1/2 bg-sky-600 text-white font-bold p-4 text-lg">
         {">"}
       </button>
