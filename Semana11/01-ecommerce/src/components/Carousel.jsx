@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
-import clsx from 'clsx'
+// import clsx from 'clsx'
 
 const Carousel = () => {
   const images = [
