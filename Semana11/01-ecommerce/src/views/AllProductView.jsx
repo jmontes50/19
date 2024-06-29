@@ -30,6 +30,7 @@ const AllProductView = () => {
 
   return (
     <div className="mt-6">
+      {/* Carousel con la grilla */}
       <div className="grid grid-cols-3 grid-rows-2 gap-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 max-h-96 mb-10">
         <div className="col-span-2 row-span-2">
           <Carousel />
@@ -42,7 +43,9 @@ const AllProductView = () => {
         </div>
 
       </div>
-      <div className="flex justify-between gap-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      {/* contenido principal cards y filtros */}
+      <div className="flex justify-between gap-4 mx-auto max-w-7xl md:px-2 px-6 sm:px-6 lg:px-8 md:flex-row flex-col ">
+        {/* Filtros */}
         <div className="lg:w-1/4 w-full">
           <h2 className="font-semibold text-lg mb-3">Filtros</h2>
           <div className="mb-2">
@@ -66,6 +69,7 @@ const AllProductView = () => {
             </select>
           </div>
         </div>
+        {/* Productos */}
         <div className="lg:w-3/4 w-full">
           <ListProducts products={productsFiltered} />
         </div>
