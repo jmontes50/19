@@ -24,4 +24,4 @@ const counterSlice = createSlice({
 const { increment, decrement } = counterSlice.actions;
 
 export { increment, decrement }; //exportando la acciones
-export default counterSlice.reducer;
+export default counterSlice.reducer; //cuando exportamos algo por defecto, eso se puede importar con otro nombre al momento de importarlo
