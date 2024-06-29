@@ -1,8 +1,12 @@
-
+import Counter from "./Counter"
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      App
+      <hr />
+      <Counter />
+    </div>
   )
 }
 
