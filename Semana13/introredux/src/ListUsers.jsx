@@ -13,6 +13,7 @@ const ListUsers = () => {
 
   useEffect(() => {
     dispatch(fetchUsers(2));
+    //manejar un servicio como hemos hecho antes y cuando tengo la data recien hacer un dispatch con un acción normalita????
   }, []);
 
   return (
