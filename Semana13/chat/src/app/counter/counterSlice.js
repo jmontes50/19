@@ -18,10 +18,13 @@ const counterSlice = createSlice({
     decrement: (state) => {
       state.value -= 1; //state.value = state.value - 1
     },
+    setOneHundred: (state) => {
+      state.value = 100
+    }
   }
 });
 
-const { increment, decrement } = counterSlice.actions;
+const { increment, decrement, setOneHundred } = counterSlice.actions;
 
-export { increment, decrement }; //exportando la acciones
+export { increment, decrement, setOneHundred }; //exportando la acciones
 export default counterSlice.reducer; //cuando exportamos algo por defecto, eso se puede importar con otro nombre al momento de importarlo

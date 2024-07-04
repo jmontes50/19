@@ -1,4 +1,4 @@
-import { increment, decrement } from "./app/counter/counterSlice";
+import { increment, decrement, setOneHundred } from "./app/counter/counterSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 const Counter = () => {
@@ -15,6 +15,10 @@ const Counter = () => {
         dispatch(decrement())
     }
 
+    const handleSetOneHundred = () => {
+        dispatch(setOneHundred())
+    }
+
     return (
         <>
             <div>Contador: {count}</div>
@@ -23,6 +27,9 @@ const Counter = () => {
             </button>
             <button onClick={handleDecrement}>
                 Reducir
+            </button>
+            <button onClick={handleSetOneHundred}>
+                Cambiar a 100
             </button>
         </>
     )
