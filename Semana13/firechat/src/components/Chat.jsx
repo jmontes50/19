@@ -12,6 +12,14 @@ const Chat = () => {
   const inputNombre = useRef();
   const inputMensaje = useRef();
 
+  const manejarEnvio = () => {
+    const nuevoMensaje = {
+      nombre:inputNombre.current.value,
+      mensaje: inputMensaje.current.value
+    }
+    dispatch(addDocument(nuevoMensaje));
+  }
+
   return (
     <div>
       <input 
@@ -25,6 +33,12 @@ const Chat = () => {
         placeholder='Mensaje'
         className='form-control'
       ></textarea>
+      <button 
+        className='btn btn-primary'
+        onClick={manejarEnvio}
+      >
+        Enviar!
+      </button>
     </div>
   )
 }
