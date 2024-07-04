@@ -20,7 +20,7 @@ const dataSlice = createSlice({
     name: 'users',
     initialState: {
         listUsers:[],
-        loading: 'idle', //loading, fulfilled, rejected
+        loading: 'idle', //pending, fulfilled, rejected
         error: null
     },
     reducers:{}, //podriamos tener algun reducer pero como tiene que ser una función pura, no podriamos manejar funciones con Promesas o asincronas,
@@ -32,7 +32,10 @@ const dataSlice = createSlice({
         })
         .addCase(fetchUsers.fulfilled, (state, action) => {
             state.loading = 'succeded',
-            state.listUsers.push(action.payload)
+            console.log("state", state)
+            console.log("action", action)
+            // state.listUsers.push(action.payload)
+            state.listUsers = [...action.payload.data]
         })
         .addCase(fetchUsers.rejected, (state, action) => {
             state.loading = 'failed',
