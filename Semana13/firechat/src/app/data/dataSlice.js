@@ -19,6 +19,34 @@ const addDocument = createAsyncThunk(
   }
 )
 
+const dataSlice = createSlice({
+  name: 'data',
+  initialState:{
+    documents: [],
+    loading: false,
+    error: null
+  },
+  reducers:{},
+  extraReducers: (builder) => {
+    builder
+      .addCase(addDocument.pending, (state) => {
+        state.loading = true
+      })
+      .addCase(addDocument.fulfilled, (state) => {
+        state.loading = false
+      })
+      .addCase(addDocument.rejected, (state, action) => {
+        state.loading = false
+        state.error = action.payload
+      })
+  }
+})
+
+export default dataSlice.reducer;
+
+export {
+    addDocument
+}
 
 
 
