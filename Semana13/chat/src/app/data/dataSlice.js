@@ -40,3 +40,11 @@ const dataSlice = createSlice({
         })
     }
 })
+
+//Como no tengo acciones en reducers, puedo obviar el dataSlice.actions
+
+export default dataSlice.reducer;
+
+export {
+    fetchUsers
+}
