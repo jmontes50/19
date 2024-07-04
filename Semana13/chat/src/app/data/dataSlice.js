@@ -18,7 +18,7 @@ const fetchUsers = createAsyncThunk(
 
 const dataSlice = createSlice({
     name: 'users',
-    state: {
+    initialState: {
         listUsers:[],
         loading: 'idle', //loading, fulfilled, rejected
         error: null
@@ -34,7 +34,7 @@ const dataSlice = createSlice({
             state.loading = 'succeded',
             state.listUsers.push(action.payload)
         })
-        .addCase(fetchUsers.fulfilled, (state, action) => {
+        .addCase(fetchUsers.rejected, (state, action) => {
             state.loading = 'failed',
             state.error = action.error
         })

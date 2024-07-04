@@ -1,4 +1,5 @@
 import Counter from "./Counter"
+import ListUsers from "./ListUsers"
 
 const App = () => {
   return (
@@ -6,6 +7,9 @@ const App = () => {
       App
       <hr />
       <Counter />
+      <hr/>
+      <h2>Usuarios</h2>
+      <ListUsers />
     </div>
   )
 }
