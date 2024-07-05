@@ -30,6 +30,7 @@ const dataListener = createAsyncThunk(
         // ...doc.data() es un objeto con toda la info del documento, entonces puedo hacerle un spread operator
         return { id: doc.id, ...doc.data() }
       })
+      thunkAPI.dispatch(setDocuments(documentos));
     })
   })
 
@@ -70,11 +71,14 @@ const dataSlice = createSlice({
   }
 })
 
+const { setDocuments } = dataSlice.actions;
+
 export default dataSlice.reducer;
 
 export {
     addDocument,
-    dataListener
+    dataListener,
+    setDocuments
 }
 
 
