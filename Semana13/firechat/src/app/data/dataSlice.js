@@ -27,7 +27,8 @@ const dataListener = createAsyncThunk(
       const documentos = querySnapshot.docs.map((doc) => {
         // console.log(doc.id);
         // console.log(doc.data());
-        
+        // ...doc.data() es un objeto con toda la info del documento, entonces puedo hacerle un spread operator
+        return { id: doc.id, ...doc.data() }
       })
     })
   })
