@@ -25,7 +25,8 @@ const dataListener = createAsyncThunk(
     const consulta = query(collection(db, 'mensajes')); //me esta creando una ref a la colección de firebase que desee
     onSnapshot(consulta, (querySnapshot) => {
       const documentos = querySnapshot.docs.map((doc) => {
-        console.log(doc);
+        console.log(doc.id);
+        console.log(doc.data());
       })
     })
   })
@@ -47,6 +48,16 @@ const dataSlice = createSlice({
         state.loading = false
       })
       .addCase(addDocument.rejected, (state, action) => {
+        state.loading = false
+        state.error = action.payload
+      })
+      .addCase(dataListener.pending, (state) => {
+        state.loading = true
+      })
+      .addCase(dataListener.fulfilled, (state) => {
+        state.loading = false
+      })
+      .addCase(dataListener.rejected, (state, action) => {
         state.loading = false
         state.error = action.payload
       })
