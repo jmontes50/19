@@ -25,8 +25,9 @@ const dataListener = createAsyncThunk(
     const consulta = query(collection(db, 'mensajes')); //me esta creando una ref a la colección de firebase que desee
     onSnapshot(consulta, (querySnapshot) => {
       const documentos = querySnapshot.docs.map((doc) => {
-        console.log(doc.id);
-        console.log(doc.data());
+        // console.log(doc.id);
+        // console.log(doc.data());
+        
       })
     })
   })
@@ -38,7 +39,11 @@ const dataSlice = createSlice({
     loading: false,
     error: null
   },
-  reducers:{},
+  reducers:{
+    setDocuments: (state, action) => {
+      state.documents = action.payload
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(addDocument.pending, (state) => {
