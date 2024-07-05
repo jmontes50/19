@@ -14,6 +14,7 @@ const Chat = () => {
     const nuevoMensaje = {
       nombre: inputNombre.current.value,
       mensaje: inputMensaje.current.value,
+      timestamp: Date.now()
     };
     dispatch(addDocument(nuevoMensaje));
   };
@@ -29,8 +30,15 @@ const Chat = () => {
         <div className="col-12 col-md-6">
           <div className="d-flex flex-column">
             {documents.map((doc) => (
-              <div key={doc.id}>
-                <p>{doc.mensaje}</p>
+              <div
+                key={doc.id}
+                className={`
+                mb-3 rounded border border-black p-2 w-50 ${
+                  doc.nombre === inputNombre.current.value ? 'align-self-end bg-info' : null
+                }
+              `}
+              >
+                <p className="m-0">{doc.mensaje}</p>
                 <small>{doc.nombre}</small>
               </div>
             ))}
