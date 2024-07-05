@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, onSnapshot, query } from "firebase/firestore";
 import { db } from "../../config/firebaseConfig";
 
 // thunk, van a ser funciones que retornar otras funciones y que se van a comportar como una acción a ejecutar. Con el objetivo de manejar tareas asíncronas
@@ -18,6 +18,12 @@ const addDocument = createAsyncThunk(
     }
   }
 )
+
+const dataListener = createAsyncThunk(
+  "data/dataListener",
+  async ( _ , thunkAPI) => {
+
+  })
 
 const dataSlice = createSlice({
   name: 'data',
