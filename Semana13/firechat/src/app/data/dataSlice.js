@@ -22,7 +22,12 @@ const addDocument = createAsyncThunk(
 const dataListener = createAsyncThunk(
   "data/dataListener",
   async ( _ , thunkAPI) => {
-
+    const consulta = query(collection(db, 'mensajes')); //me esta creando una ref a la colección de firebase que desee
+    onSnapshot(consulta, (querySnapshot) => {
+      const documentos = querySnapshot.docs.map((doc) => {
+        console.log(doc);
+      })
+    })
   })
 
 const dataSlice = createSlice({
@@ -51,7 +56,8 @@ const dataSlice = createSlice({
 export default dataSlice.reducer;
 
 export {
-    addDocument
+    addDocument,
+    dataListener
 }
 
 

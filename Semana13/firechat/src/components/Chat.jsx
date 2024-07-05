@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addDocument } from '../app/data/dataSlice';
+import { addDocument, dataListener } from '../app/data/dataSlice';
 
 const Chat = () => {
   
@@ -19,6 +19,10 @@ const Chat = () => {
     }
     dispatch(addDocument(nuevoMensaje));
   }
+
+  useEffect(() => {
+    dispatch(dataListener());
+  }, [])
 
   return (
     <div>
