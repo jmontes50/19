@@ -3,8 +3,7 @@ import Chat from './components/Chat'
 
 const App = () => {
   return (
-    <div>App
-
+    <div>
       <Chat />
     </div>
   )
