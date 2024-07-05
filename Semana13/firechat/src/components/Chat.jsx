@@ -25,7 +25,18 @@ const Chat = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-12 col-md-6"></div>
+        {/* Mensajes */}
+        <div className="col-12 col-md-6">
+          <div className="d-flex flex-column">
+            {documents.map((doc) => (
+              <div key={doc.id}>
+                <p>{doc.mensaje}</p>
+                <small>{doc.nombre}</small>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Inputs */}
         <div className="col-12 col-md-6">
           <input
             type="text"
